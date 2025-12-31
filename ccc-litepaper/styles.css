@@ -1,0 +1,170 @@
+/* ---------- ROOT TOKENS ---------- */
+
+:root {
+  --bg: #05010f;
+  --panel: #0c061a;
+  --text: #f8f5ff;
+  --muted: #a59ac7;
+
+  --base-accent: #ff1493;
+  --gold-accent: #ffd700;
+  --plat-accent: #e8e8e8;
+}
+
+/* ---------- THEMES ---------- */
+
+body.theme-base { --accent: var(--base-accent); }
+body.theme-gold { --accent: var(--gold-accent); }
+body.theme-platinum { --accent: var(--plat-accent); }
+
+/* ---------- RESET ---------- */
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* ---------- HEADER ---------- */
+
+.top-nav {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1100px, 94%);
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(5,1,15,0.9);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.brand-title {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ---------- MODE TOGGLE ---------- */
+
+.mode-toggle { display: flex; gap: 6px; }
+
+.mode-btn {
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  color: var(--muted);
+  padding: 6px 12px;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.mode-btn.active {
+  background: linear-gradient(120deg, var(--accent), #fff);
+  color: #05010f;
+  font-weight: 600;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 640px;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 20px;
+  background: linear-gradient(120deg, var(--accent), #fff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-lede {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ---------- CONTENT ---------- */
+
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 20px 120px;
+}
+
+.block {
+  margin-bottom: 72px;
+}
+
+.block h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.block p {
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* ---------- LISTS ---------- */
+
+.principles,
+.flow {
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.principles li,
+.flow li {
+  margin-bottom: 10px;
+}
+
+/* ---------- TIERS ---------- */
+
+.tiers {
+  display: grid;
+  gap: 12px;
+}
+
+.tier {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--panel);
+  border-left: 3px solid var(--accent);
+}
+
+.tier-name {
+  font-weight: 600;
+}
+
+.tier-desc {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
