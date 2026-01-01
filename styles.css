@@ -311,3 +311,31 @@ html, body {
 .dot.venues   { background: var(--gold-accent); }
 .dot.members  { background: #c0c0c0; }
 .dot.protocol { background: #2b2240; }
+
+/* ---------- PROTOCOL FLOW ---------- */
+
+.flow-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 22px 0 16px;
+}
+
+.flow-node {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+.flow-node.muted {
+  opacity: 0.6;
+}
+
+.flow-arrow {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
