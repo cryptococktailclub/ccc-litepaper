@@ -6,6 +6,8 @@
 (function () {
   const BODY = document.body;
   const MODE_BTNS = document.querySelectorAll(".mode-btn");
+  const HEADER = document.querySelector(".top-nav");
+
   const STORAGE_KEY = "ccc-litepaper-theme";
 
   /* -----------------------------
@@ -22,9 +24,7 @@
 
     try {
       localStorage.setItem(STORAGE_KEY, theme);
-    } catch (e) {
-      /* silently fail (privacy modes, etc.) */
-    }
+    } catch (e) {}
   }
 
   /* -----------------------------
@@ -34,16 +34,12 @@
   function loadSavedTheme() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved && BODY.classList.contains(`theme-${saved}`) === false) {
-        applyTheme(saved);
-      }
-    } catch (e) {
-      /* ignore */
-    }
+      if (saved) applyTheme(saved);
+    } catch (e) {}
   }
 
   /* -----------------------------
-     BUTTON HANDLERS
+     MODE BUTTONS
   ----------------------------- */
 
   MODE_BTNS.forEach(btn => {
@@ -55,8 +51,40 @@
   });
 
   /* -----------------------------
+     HEADER SCROLL REVEAL
+  ----------------------------- */
+
+  function handleScroll() {
+    if (!HEADER) return;
+    if (window.scrollY > 60) {
+      HEADER.classList.add("is-visible");
+    } else {
+      HEADER.classList.remove("is-visible");
+    }
+  }
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+
+  /* -----------------------------
+     CROSS-DOMAIN CONTEXT AWARENESS
+  ----------------------------- */
+
+  function markExternalContext() {
+    const link = document.querySelector(".footer-link a");
+    if (!link) return;
+
+    if (window.location.hostname.includes("cryptococktailclub.com")) {
+      link.textContent = "Enter the Virtual Bar (.club)";
+    } else {
+      link.textContent = "View Litepaper (.com)";
+    }
+  }
+
+  /* -----------------------------
      INIT
   ----------------------------- */
 
   loadSavedTheme();
+  handleScroll();
+  markExternalContext();
 })();
