@@ -58,6 +58,20 @@ html, body {
   text-transform: uppercase;
   font-weight: 600;
 }
+/* ---------- HEADER REVEAL ---------- */
+
+.top-nav {
+  opacity: 0;
+  transform: translate(-50%, -10px);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.top-nav.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
 
 /* ---------- MODE TOGGLE ---------- */
 
@@ -338,4 +352,23 @@ html, body {
 .flow-arrow {
   font-size: 0.9rem;
   color: var(--muted);
+}
+/* ---------- TOKEN PIE THEME GLOW ---------- */
+
+body.theme-base .token-pie {
+  box-shadow:
+    0 0 28px rgba(255, 20, 147, 0.45),
+    inset 0 0 18px rgba(0,0,0,0.75);
+}
+
+body.theme-gold .token-pie {
+  box-shadow:
+    0 0 28px rgba(255, 215, 0, 0.45),
+    inset 0 0 18px rgba(0,0,0,0.75);
+}
+
+body.theme-platinum .token-pie {
+  box-shadow:
+    0 0 28px rgba(232, 232, 232, 0.45),
+    inset 0 0 18px rgba(0,0,0,0.75);
 }
