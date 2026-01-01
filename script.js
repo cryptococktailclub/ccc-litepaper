@@ -50,20 +50,26 @@
     });
   });
 
-  /* -----------------------------
-     HEADER SCROLL REVEAL
-  ----------------------------- */
+/* ---------- HEADER REVEAL ---------- */
 
-  function handleScroll() {
-    if (!HEADER) return;
-    if (window.scrollY > 60) {
-      HEADER.classList.add("is-visible");
-    } else {
-      HEADER.classList.remove("is-visible");
-    }
+const HEADER = document.querySelector(".top-nav");
+
+function revealHeader() {
+  if (!HEADER) return;
+
+  if (window.scrollY > 40) {
+    HEADER.classList.add("is-visible");
+  } else {
+    HEADER.classList.remove("is-visible");
   }
+}
 
-  window.addEventListener("scroll", handleScroll, { passive: true });
+/* Run immediately on load */
+revealHeader();
+
+/* Run on scroll */
+window.addEventListener("scroll", revealHeader, { passive: true });
+
 
   /* -----------------------------
      CROSS-DOMAIN CONTEXT AWARENESS
