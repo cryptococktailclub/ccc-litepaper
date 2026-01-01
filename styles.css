@@ -260,3 +260,54 @@ html, body {
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.18);
 }
+/* ---------- TOKENOMICS VISUAL ---------- */
+
+.tokenomics-wrap {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.token-pie {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      var(--base-accent) 0% 30%,
+      var(--gold-accent) 30% 55%,
+      #c0c0c0 55% 75%,
+      #2b2240 75% 100%
+    );
+  box-shadow:
+    0 0 26px rgba(255, 20, 147, 0.35),
+    inset 0 0 18px rgba(0,0,0,0.7);
+}
+
+.token-legend {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.78rem;
+}
+
+.token-legend li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.creators { background: var(--base-accent); }
+.dot.venues   { background: var(--gold-accent); }
+.dot.members  { background: #c0c0c0; }
+.dot.protocol { background: #2b2240; }
