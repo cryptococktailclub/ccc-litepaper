@@ -170,6 +170,40 @@ body.theme-platinum .header-logo {
   line-height: 1.7;
   color: var(--muted);
 }
+/* ---------- HERO LOGO ---------- */
+
+.hero-logo {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 22px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow:
+    0 0 26px rgba(0, 0, 0, 0.9),
+    0 0 24px rgba(255, 20, 147, 0.55);
+}
+
+/* Theme-aware glow */
+body.theme-gold .hero-logo {
+  box-shadow:
+    0 0 26px rgba(0, 0, 0, 0.9),
+    0 0 24px rgba(255, 215, 0, 0.55);
+}
+
+body.theme-platinum .hero-logo {
+  box-shadow:
+    0 0 26px rgba(0, 0, 0, 0.9),
+    0 0 26px rgba(232, 232, 232, 0.65);
+}
+
+/* Mobile tuning */
+@media (max-width: 600px) {
+  .hero-logo {
+    width: 76px;
+    height: 76px;
+    margin-bottom: 18px;
+  }
+}
 
 /* ---------- CONTENT ---------- */
 
