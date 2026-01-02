@@ -204,6 +204,9 @@ body.theme-platinum .hero-logo {
     margin-bottom: 18px;
   }
 }
+.hero {
+  padding-top: 120px;
+}
 
 /* ---------- CONTENT ---------- */
 
@@ -223,15 +226,33 @@ body.theme-platinum .hero-logo {
   border-radius: 22px;
   border: 1px solid rgba(255,255,255,0.08);
 }
+/* ---------- SOFT SECTIONS ---------- */
+
+.section.soft .card {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+/* ---------- RHYTHM ---------- */
+
+.section + .section {
+  margin-top: 96px;
+}
+
+.section.soft + .section.soft {
+  margin-top: 72px;
+}
 
 /* ---------- TYPOGRAPHY ---------- */
 
 .section-title {
-  font-size: 1rem;
-  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+  color: var(--text);
 }
+
 
 .section-subtitle {
   font-size: 0.8rem;
@@ -323,6 +344,23 @@ body.theme-platinum .hero-logo {
     transparent
   );
 }
+/* ---------- SECTION DIVIDER ---------- */
+
+.section-divider {
+  width: 60px;
+  height: 1px;
+  margin: 36px 0 28px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--accent),
+    transparent
+  );
+  opacity: 0.45;
+}
+.section-copy {
+  max-width: 640px;
+}
 
 /* ---------- FOOTER ---------- */
 
@@ -396,6 +434,9 @@ body.theme-platinum .footer-logo {
     transform: translateY(-2px) scale(1.02);
   }
 }
+.litepaper-footer {
+  opacity: 0.9;
+}
 
 /* ---------- TOKENOMICS VISUAL ---------- */
 
@@ -448,6 +489,16 @@ body.theme-platinum .footer-logo {
 .dot.venues   { background: var(--gold-accent); }
 .dot.members  { background: #c0c0c0; }
 .dot.protocol { background: #2b2240; }
+.tokenomics-wrap {
+  justify-content: center;
+}
+
+.token-pie {
+  margin-right: 8px;
+}
+.token-legend {
+  max-width: 280px;
+}
 
 /* ---------- PROTOCOL FLOW ---------- */
 
