@@ -50,26 +50,25 @@
     });
   });
 
-/* ---------- HEADER REVEAL ---------- */
+  /* -----------------------------
+     HEADER REVEAL
+  ----------------------------- */
 
-const HEADER = document.querySelector(".top-nav");
+  function revealHeader() {
+    if (!HEADER) return;
 
-function revealHeader() {
-  if (!HEADER) return;
-
-  if (window.scrollY > 40) {
-    HEADER.classList.add("is-visible");
-  } else {
-    HEADER.classList.remove("is-visible");
+    if (window.scrollY > 40) {
+      HEADER.classList.add("is-visible");
+    } else {
+      HEADER.classList.remove("is-visible");
+    }
   }
-}
 
-/* Run immediately on load */
-revealHeader();
+  // Run immediately on load
+  revealHeader();
 
-/* Run on scroll */
-window.addEventListener("scroll", revealHeader, { passive: true });
-
+  // Run on scroll
+  window.addEventListener("scroll", revealHeader, { passive: true });
 
   /* -----------------------------
      CROSS-DOMAIN CONTEXT AWARENESS
@@ -91,6 +90,5 @@ window.addEventListener("scroll", revealHeader, { passive: true });
   ----------------------------- */
 
   loadSavedTheme();
-  handleScroll();
   markExternalContext();
 })();
