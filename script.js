@@ -1,58 +1,10 @@
 /* =====================================================
    Crypto Cocktail Club — Litepaper
-   script.js
+   script.js (simplified, no theme switching)
    ===================================================== */
 
 (function () {
-  const BODY = document.body;
-  const MODE_BTNS = document.querySelectorAll(".mode-btn");
   const HEADER = document.querySelector(".top-nav");
-
-  const STORAGE_KEY = "ccc-litepaper-theme";
-
-  /* -----------------------------
-     APPLY THEME
-  ----------------------------- */
-
-  function applyTheme(theme) {
-    BODY.classList.remove("theme-base", "theme-gold", "theme-platinum");
-    BODY.classList.add(`theme-${theme}`);
-
-    MODE_BTNS.forEach(btn => {
-      btn.classList.toggle("active", btn.dataset.theme === theme);
-    });
-
-    try {
-      localStorage.setItem(STORAGE_KEY, theme);
-    } catch (e) {}
-  }
-
-  /* -----------------------------
-     LOAD SAVED THEME
-  ----------------------------- */
-
-  function loadSavedTheme() {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) applyTheme(saved);
-    } catch (e) {}
-  }
-
-  /* -----------------------------
-     MODE BUTTONS
-  ----------------------------- */
-
-  MODE_BTNS.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const theme = btn.dataset.theme;
-      if (!theme) return;
-      applyTheme(theme);
-    });
-  });
-
-  /* -----------------------------
-     HEADER REVEAL
-  ----------------------------- */
 
   function revealHeader() {
     if (!HEADER) return;
@@ -64,31 +16,19 @@
     }
   }
 
-  // Run immediately on load
+  // Initial state
   revealHeader();
 
-  // Run on scroll
+  // Scroll listener
   window.addEventListener("scroll", revealHeader, { passive: true });
 
-  /* -----------------------------
-     CROSS-DOMAIN CONTEXT AWARENESS
-  ----------------------------- */
-
-  function markExternalContext() {
-    const link = document.querySelector(".footer-link a");
-    if (!link) return;
-
+  // Footer cross-domain label
+  const link = document.querySelector(".footer-link a");
+  if (link) {
     if (window.location.hostname.includes("cryptococktailclub.com")) {
       link.textContent = "Enter the Virtual Bar (.club)";
     } else {
       link.textContent = "View Litepaper (.com)";
     }
   }
-
-  /* -----------------------------
-     INIT
-  ----------------------------- */
-
-  loadSavedTheme();
-  markExternalContext();
 })();
