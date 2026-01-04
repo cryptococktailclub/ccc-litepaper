@@ -285,7 +285,20 @@ html, body {
   opacity: 1;
   transform: translateY(-1px);
 }
+/* FORCE FOOTER CENTERING */
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers children horizontally */
+  text-align: center;    /* centers text itself */
+}
 
+.footer-meta {
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 @media (max-width: 600px) {
   .hero-echo img {
