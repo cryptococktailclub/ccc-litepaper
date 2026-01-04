@@ -100,6 +100,39 @@ html, body {
   line-height: 1.7;
   color: var(--muted);
 }
+/* ---------------------------------
+   HERO LOGO ECHO
+--------------------------------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-echo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-echo img {
+  width: min(420px, 85vw);
+  opacity: 0.035;
+  filter:
+    blur(0.2px)
+    drop-shadow(0 0 40px rgba(255, 20, 147, 0.25));
+  transform: translateY(-10%);
+}
+
+/* Ensure content sits above echo */
+.hero-inner {
+  position: relative;
+  z-index: 1;
+}
 
 /* CONTENT */
 .content {
