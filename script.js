@@ -1,34 +1,22 @@
 /* =====================================================
-   Crypto Cocktail Club — Litepaper
-   script.js (simplified, no theme switching)
+   CCC Litepaper — Header Reveal
    ===================================================== */
 
 (function () {
-  const HEADER = document.querySelector(".top-nav");
+  const header = document.querySelector(".top-nav");
+  if (!header) return;
 
-  function revealHeader() {
-    if (!HEADER) return;
-
-    if (window.scrollY > 40) {
-      HEADER.classList.add("is-visible");
+  function onScroll() {
+    if (window.scrollY > 60) {
+      header.classList.add("is-visible");
     } else {
-      HEADER.classList.remove("is-visible");
+      header.classList.remove("is-visible");
     }
   }
 
-  // Initial state
-  revealHeader();
+  // Run once on load
+  onScroll();
 
-  // Scroll listener
-  window.addEventListener("scroll", revealHeader, { passive: true });
-
-  // Footer cross-domain label
-  const link = document.querySelector(".footer-link a");
-  if (link) {
-    if (window.location.hostname.includes("cryptococktailclub.com")) {
-      link.textContent = "Enter the Virtual Bar (.club)";
-    } else {
-      link.textContent = "View Litepaper (.com)";
-    }
-  }
+  // Listen for scroll
+  window.addEventListener("scroll", onScroll, { passive: true });
 })();
