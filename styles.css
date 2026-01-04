@@ -249,37 +249,43 @@ html, body {
   background: linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
 }
 
-/* FOOTER */
-.litepaper-footer {
-  margin-top: 120px;
-  padding: 48px 16px 64px;
+.site-footer {
+  padding: 56px 16px 64px;
   text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .footer-meta {
   font-size: 0.75rem;
   color: var(--muted);
-}
-.footer-icons {
-  display: flex;
-  gap: 16px;
-  align-items: center;
+  margin-bottom: 18px; /* space between text and icons */
 }
 
+/* ICON ROW — CENTERED */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+/* ICON LINKS */
 .footer-icon-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: inherit;
   opacity: 0.75;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .footer-icon-link:hover {
   opacity: 1;
   transform: translateY(-1px);
 }
+
 
 @media (max-width: 600px) {
   .hero-echo img {
