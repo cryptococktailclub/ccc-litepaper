@@ -15,16 +15,46 @@ html, body {
   font-family: "Inter", system-ui, sans-serif;
 }
 
-/* HEADER LOGO */
+/* HEADER */
+.top-nav {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  width: min(1100px, 94%);
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(5,1,15,0.9);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.top-nav.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
 .header-logo {
   width: 28px;
   height: 28px;
   margin-right: 10px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 10px rgba(255, 20, 147, 0.6));
+  filter: drop-shadow(0 0 10px rgba(255,20,147,0.6));
 }
 
-/* NAV LINK (Virtual Bar) */
+.brand-title {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 .nav-link {
   font-size: 0.75rem;
   letter-spacing: 0.14em;
@@ -34,44 +64,54 @@ html, body {
   padding: 6px 14px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.18);
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .nav-link:hover {
   background: rgba(255,255,255,0.08);
   transform: translateY(-1px);
-  box-shadow: 0 0 14px rgba(255,20,147,0.35);
 }
 
 /* HERO */
 .hero {
+  position: relative;
   min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
+}
+
+.hero-echo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hero-echo img {
+  width: min(420px, 85vw);
+  opacity: 0.035;
+  filter: drop-shadow(0 0 40px rgba(255,20,147,0.25));
+  transform: translateY(-10%);
 }
 
 .hero-inner {
+  position: relative;
+  z-index: 1;
   max-width: 640px;
   padding: 0 20px;
 }
 
-.hero-logo {
-  width: 120px;
-  margin-bottom: 28px;
-  filter: drop-shadow(0 0 18px rgba(255,20,147,0.6));
-}
-
 .hero-title {
   font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 16px;
   background: linear-gradient(120deg, var(--accent), #ffffff);
   -webkit-background-clip: text;
   color: transparent;
+  margin-bottom: 16px;
 }
 
 .hero-tagline {
@@ -86,39 +126,6 @@ html, body {
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--muted);
-}
-/* ---------------------------------
-   HERO LOGO ECHO
---------------------------------- */
-
-.hero {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-echo {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.hero-echo img {
-  width: min(420px, 85vw);
-  opacity: 0.035;
-  filter:
-    blur(0.2px)
-    drop-shadow(0 0 40px rgba(255, 20, 147, 0.25));
-  transform: translateY(-10%);
-}
-
-/* Ensure content sits above echo */
-.hero-inner {
-  position: relative;
-  z-index: 1;
 }
 
 /* CONTENT */
@@ -139,7 +146,6 @@ html, body {
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* TYPOGRAPHY */
 .section-title {
   font-size: 0.9rem;
   letter-spacing: 0.12em;
@@ -156,10 +162,6 @@ html, body {
 .section-copy {
   line-height: 1.7;
   color: var(--muted);
-}
-
-.section-copy strong {
-  color: #ffffff;
 }
 
 /* LISTS */
@@ -207,16 +209,13 @@ html, body {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  background:
-    conic-gradient(
-      var(--accent) 0% 30%,
-      #ffd700 30% 55%,
-      #c0c0c0 55% 75%,
-      #2b2240 75% 100%
-    );
-  box-shadow:
-    0 0 28px rgba(255,20,147,0.45),
-    inset 0 0 18px rgba(0,0,0,0.75);
+  background: conic-gradient(
+    var(--accent) 0% 30%,
+    #ffd700 30% 55%,
+    #c0c0c0 55% 75%,
+    #2b2240 75% 100%
+  );
+  box-shadow: 0 0 28px rgba(255,20,147,0.45);
 }
 
 .token-legend {
@@ -261,23 +260,11 @@ html, body {
 .footer-meta {
   font-size: 0.75rem;
   color: var(--muted);
-  margin-bottom: 14px;
 }
 
-.footer-link a {
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  padding: 8px 18px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.18);
-}
 @media (max-width: 600px) {
   .hero-echo img {
     width: 320px;
     opacity: 0.03;
-    transform: translateY(-6%);
   }
 }
