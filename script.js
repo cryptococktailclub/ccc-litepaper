@@ -6,7 +6,7 @@
   const header = document.querySelector(".top-nav");
   if (!header) return;
 
-  function onScroll() {
+  function revealHeader() {
     if (window.scrollY > 60) {
       header.classList.add("is-visible");
     } else {
@@ -14,9 +14,9 @@
     }
   }
 
-  // Run once on load
-  onScroll();
+  // Run once after paint
+  window.addEventListener("load", revealHeader);
 
-  // Listen for scroll
-  window.addEventListener("scroll", onScroll, { passive: true });
+  // Run on scroll
+  window.addEventListener("scroll", revealHeader, { passive: true });
 })();
