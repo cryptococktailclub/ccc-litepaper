@@ -261,6 +261,25 @@ html, body {
   font-size: 0.75rem;
   color: var(--muted);
 }
+.footer-icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.footer-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footer-icon-link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
 
 @media (max-width: 600px) {
   .hero-echo img {
