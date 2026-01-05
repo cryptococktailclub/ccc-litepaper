@@ -132,6 +132,15 @@ html, body {
   line-height: 1.7;
   color: var(--muted);
 }
+.hero {
+  padding-top: 120px;
+}
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 96px;
+  }
+}
+
 /* =====================================================
    HERO LOGO — MATCH .CLUB
    ===================================================== */
@@ -140,7 +149,8 @@ html, body {
   width: 120px;
   height: auto;
   margin-bottom: 28px;
-  filter: drop-shadow(0 0 18px rgba(255, 20, 147, 0.6));
+  filter: drop-shadow(0 0 8px rgba(255,20,147,0.55));
+
 }
 
 /* Mobile parity with .club */
@@ -402,5 +412,10 @@ html, body {
     padding: 5px 12px;
     letter-spacing: 0.12em;
     white-space: nowrap;
+  }
+}
+@media (max-width: 768px) {
+  .top-nav {
+    align-items: center;
   }
 }
