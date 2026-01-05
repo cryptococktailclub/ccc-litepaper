@@ -421,3 +421,21 @@ html, body {
     white-space: nowrap;
   }
 }
+/* =====================================================
+   FOOTER — MOBILE LOCK
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  .footer-meta {
+    white-space: nowrap;        /* force single line */
+    font-size: 0.7rem;          /* slight reduction */
+    letter-spacing: 0.02em;     /* tighten spacing */
+    text-align: center;
+  }
+
+  .footer-icons {
+    justify-content: center;    /* hard center */
+    width: 100%;
+  }
+}
