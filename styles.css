@@ -39,6 +39,15 @@ html, body {
     opacity 0.28s ease-out,
     transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
 }
+/* ===============================
+   HEADER VISIBLE STATE
+================================ */
+
+.top-nav.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
 
 /* ===============================
    HEADER BRAND — MATCH .CLUB
