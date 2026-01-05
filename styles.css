@@ -135,10 +135,20 @@ body {
   margin-bottom: 16px;
 }
 
+/* HERO SUBTITLE — FORCE 2-LINE BALANCE */
+
 .hero-lede {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: var(--muted);
+  max-width: 720px;       /* wider measure */
+  margin: 0 auto;
+  line-height: 1.55;      /* slightly tighter */
+}
+
+/* Mobile keeps natural wrapping */
+@media (max-width: 768px) {
+  .hero-lede {
+    max-width: 100%;
+    line-height: 1.6;
+  }
 }
 
 /* ===============================
