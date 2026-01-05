@@ -28,9 +28,9 @@ html, body {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  z-index: 50;
   opacity: 0;
   pointer-events: none;
+  transition: opacity .25s ease, transform .4s ease;
 }
 
 .top-nav.is-visible {
@@ -47,38 +47,35 @@ html, body {
 
 .header-logo {
   width: 28px;
-  height: 28px;
 }
 
 .brand-title {
-  font-size: 0.82rem;
-  letter-spacing: 0.14em;
+  font-size: .82rem;
+  letter-spacing: .14em;
   text-transform: uppercase;
   font-weight: 600;
 }
 
 .nav-link {
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
+  font-size: .78rem;
   padding: 7px 16px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.18);
-  color: #fff;
+  border: 1px solid rgba(255,255,255,.18);
   text-decoration: none;
+  color: #fff;
 }
 
 /* HERO */
 .hero {
   min-height: 90vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding-top: 120px;
+  justify-content: center;
   text-align: center;
 }
 
 .hero-inner {
-  max-width: 720px;
+  max-width: 680px;
   padding: 0 20px;
 }
 
@@ -88,154 +85,71 @@ html, body {
 }
 
 .hero-title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  background: linear-gradient(120deg, var(--accent), #fff);
-  -webkit-background-clip: text;
-  color: transparent;
+  font-size: clamp(2rem,5vw,3rem);
   margin-bottom: 14px;
 }
 
-.hero-tagline {
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  color: var(--muted);
-  margin-bottom: 14px;
-}
-
-.hero-lede {
-  max-width: 720px;
-  margin: 0 auto;
-  line-height: 1.55;
-  color: var(--muted);
-}
-
-/* LITEPAPER */
-.litepaper {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 120px 20px 140px;
-}
-
-.lp-section {
-  margin-bottom: 96px;
-}
-
-.lp-section h2 {
-  font-size: 0.85rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 18px;
-}
-
-.lp-section p {
+.hero-subtitle {
   font-size: 1.05rem;
-  line-height: 1.75;
-  margin-bottom: 18px;
-}
-
-/* LISTS */
-.lp-list {
-  padding-left: 18px;
-  margin-top: 12px;
-}
-
-.lp-list li {
-  margin-bottom: 10px;
-}
-
-/* DIVIDER */
-.lp-divider {
-  height: 1px;
-  margin: 64px 0;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.14), transparent);
-}
-
-/* TIERS */
-.tier-row {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.tier-base strong { color: #ff1493; }
-.tier-gold strong { color: #ffd700; }
-.tier-platinum strong { color: #e8e8e8; }
-
-/* TOKENOMICS */
-.tokenomics-wrap {
-  display: flex;
-  gap: 28px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.token-pie {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: conic-gradient(
-    #ff1493 0% 30%,
-    #ffd700 30% 55%,
-    #c0c0c0 55% 75%,
-    #2b2240 75% 100%
-  );
-}
-
-.token-legend {
-  list-style: none;
-  padding: 0;
-  font-size: 0.78rem;
-}
-
-.token-legend li {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 8px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.dot.creators { background: #ff1493; }
-.dot.venues { background: #ffd700; }
-.dot.members { background: #c0c0c0; }
-.dot.protocol { background: #2b2240; }
-
-/* FLOW */
-.flow-diagram {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 32px;
-  font-size: 0.8rem;
+  line-height: 1.6;
   color: var(--muted);
 }
 
-.flow-diagram span {
-  padding: 6px 10px;
+/* CONTENT */
+.content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 80px 20px 120px;
+}
+
+.section {
+  margin-bottom: 72px;
+}
+
+.section-title {
+  font-size: .85rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.section p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+/* FLOW DIAGRAM */
+.protocol-flow {
+  margin: 36px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.flow-step {
+  padding: 10px 18px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,.18);
+  font-size: .75rem;
+  background: rgba(255,255,255,.04);
+}
+
+.flow-arrow {
+  opacity: .5;
 }
 
 /* FOOTER */
 .site-footer {
-  padding: 56px 16px 64px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 56px 16px;
   text-align: center;
+  border-top: 1px solid rgba(255,255,255,.06);
 }
 
 .footer-icons {
   display: flex;
+  justify-content: center;
   gap: 18px;
   margin-bottom: 18px;
 }
@@ -244,89 +158,17 @@ html, body {
   width: 18px;
   height: 18px;
   fill: currentColor;
+  opacity: .75;
 }
 
 .footer-meta {
-  font-size: 0.75rem;
+  font-size: .75rem;
   color: var(--muted);
   white-space: nowrap;
 }
-/* =====================================
-   VALUE CREATION LOOP
-===================================== */
 
-.value-loop {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 36px;
-}
-
-.loop-node {
-  min-width: 140px;
-  padding: 14px 16px;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.14);
-  text-align: center;
-  font-size: 0.85rem;
-}
-
-.loop-node strong {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-
-.loop-node span {
-  color: var(--muted);
-  font-size: 0.78rem;
-}
-
-.loop-arrow {
-  color: var(--muted);
-  font-size: 1.2rem;
-}
-
-/* Semantic colors */
-.loop-node.creators strong { color: #ff1493; }
-.loop-node.venues strong { color: #ffd700; }
-.loop-node.members strong { color: #c0c0c0; }
-.loop-node.protocol strong { color: #a59ac7; }
-
-/* =====================================
-   TIPZ INCENTIVE CIRCULATION — ALIGN FIX
-===================================== */
-
-.lp-section {
-  max-width: 860px;
-  margin: 0 auto 96px;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.tipz-flow {
-  display: flex;
-  flex-direction: column;
-  align-items: center;   /* HARD CENTER */
-  justify-content: center;
-  gap: 14px;
-  margin-top: 36px;
-}
-
-.tipz-step {
-  width: 100%;
-  max-width: 420px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 16px 18px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.14);
-  text-align: center;
-}
-
-.tipz-arrow {
-  font-size: 1.2rem;
-  color: var(--muted);
+/* MOBILE */
+@media (max-width: 600px) {
+  .hero-logo { width: 96px; }
+  .footer-meta { font-size: .7rem; }
 }
