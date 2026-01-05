@@ -16,29 +16,33 @@ html, body {
 }
 
 /* ===============================
-   HEADER
+   HEADER — DESKTOP (MATCH .CLUB)
 ================================ */
 
 .top-nav {
   position: fixed;
-  top: 16px;
+  top: 20px;
   left: 50%;
-  transform: translate(-50%, -10px);
-  width: min(1100px, 94%);
-  padding: 10px 16px;
+  transform: translate(-50%, -12px);
+  width: min(1180px, 94%);
+  padding: 14px 20px;
   border-radius: 999px;
-  background: rgba(5,1,15,0.9);
+  background: rgba(5,1,15,0.92);
   border: 1px solid rgba(255,255,255,0.08);
+
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
+
   z-index: 50;
   opacity: 0;
   pointer-events: none;
+
   transition:
     opacity 0.28s ease-out,
     transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
 /* ===============================
    HEADER VISIBLE STATE
 ================================ */
@@ -49,33 +53,27 @@ html, body {
   transform: translate(-50%, 0);
 }
 
-/* ===============================
-   HEADER BRAND — MATCH .CLUB
-================================ */
-
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-/* Logo */
+/* Logo — MATCH .CLUB */
 .header-logo {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
-  margin: 0;
-  filter: drop-shadow(0 0 8px rgba(255,20,147,0.55));
+  filter: drop-shadow(0 0 10px rgba(255,20,147,0.6));
 }
 
 /* Brand text */
 .brand-title {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 1;
-  white-space: nowrap;
 }
 
 /* ===============================
@@ -83,20 +81,21 @@ html, body {
 ================================ */
 
 .nav-link {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   letter-spacing: 0.14em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.18);
-  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .nav-link:hover {
   background: rgba(255,255,255,0.08);
   transform: translateY(-1px);
+}
+.top-nav.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
 }
 
 /* HERO */
