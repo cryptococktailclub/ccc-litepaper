@@ -439,3 +439,35 @@ html, body {
     width: 100%;
   }
 }
+/* =====================================================
+   FOOTER — MOBILE HARD CENTER FIX
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  .site-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-icons {
+    width: 100%;                /* critical */
+    display: flex;
+    justify-content: center;    /* real centering */
+    align-items: center;
+    margin: 0 auto 18px;
+  }
+
+  .footer-icon-link {
+    display: inline-flex;
+  }
+
+  .footer-meta {
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.7rem;
+  }
+}
