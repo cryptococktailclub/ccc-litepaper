@@ -154,6 +154,24 @@ html, body {
   line-height: 1.7;
   color: var(--muted);
 }
+/* =====================================================
+   HERO LOGO — MATCH .CLUB
+   ===================================================== */
+
+.hero-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 28px;
+  filter: drop-shadow(0 0 18px rgba(255, 20, 147, 0.6));
+}
+
+/* Mobile parity with .club */
+@media (max-width: 600px) {
+  .hero-logo {
+    width: 96px;
+    margin-bottom: 22px;
+  }
+}
 
 /* CONTENT */
 .content {
