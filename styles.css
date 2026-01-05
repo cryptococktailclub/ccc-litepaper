@@ -294,14 +294,23 @@ html, body {
 .loop-node.venues strong { color: #ffd700; }
 .loop-node.members strong { color: #c0c0c0; }
 .loop-node.protocol strong { color: #a59ac7; }
+
 /* =====================================
-   TIPZ INCENTIVE FLOW
+   TIPZ INCENTIVE CIRCULATION — ALIGN FIX
 ===================================== */
+
+.lp-section {
+  max-width: 860px;
+  margin: 0 auto 96px;
+  padding: 0 20px;
+  text-align: center;
+}
 
 .tipz-flow {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;   /* HARD CENTER */
+  justify-content: center;
   gap: 14px;
   margin-top: 36px;
 }
@@ -309,25 +318,15 @@ html, body {
 .tipz-step {
   width: 100%;
   max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 16px 18px;
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.14);
   text-align: center;
 }
 
-.tipz-step strong {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: var(--accent);
-}
-
-.tipz-step span {
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
 .tipz-arrow {
-  color: var(--muted);
   font-size: 1.2rem;
+  color: var(--muted);
 }
