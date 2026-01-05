@@ -140,32 +140,36 @@ html, body {
   opacity: .5;
 }
 
-/* FOOTER */
-.site-footer {
-  padding: 56px 16px;
-  text-align: center;
-  border-top: 1px solid rgba(255,255,255,.06);
-}
-
+/* FOOTER ICONS — HARD FIX */
 .footer-icons {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 18px;
-  margin-bottom: 18px;
+}
+
+.footer-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--text);
 }
 
 .footer-icon-link svg {
   width: 18px;
   height: 18px;
   fill: currentColor;
-  opacity: .75;
+  display: block;
+  shape-rendering: geometricPrecision;
 }
 
-.footer-meta {
-  font-size: .75rem;
-  color: var(--muted);
-  white-space: nowrap;
+.footer-icon-link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
 }
+
 
 /* MOBILE */
 @media (max-width: 600px) {
