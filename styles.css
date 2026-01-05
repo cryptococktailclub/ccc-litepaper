@@ -6,9 +6,16 @@
   --accent: #ff1493;
 }
 
-/* RESET */
-* { box-sizing: border-box; }
-html, body {
+/* ===============================
+   RESET
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
@@ -16,7 +23,7 @@ html, body {
 }
 
 /* ===============================
-   HEADER — DESKTOP (MATCH .CLUB)
+   HEADER — MATCH .CLUB
 ================================ */
 
 .top-nav {
@@ -27,8 +34,8 @@ html, body {
   width: min(1180px, 94%);
   padding: 14px 20px;
   border-radius: 999px;
-  background: rgba(5,1,15,0.92);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(5, 1, 15, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -43,10 +50,6 @@ html, body {
     transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* ===============================
-   HEADER VISIBLE STATE
-================================ */
-
 .top-nav.is-visible {
   opacity: 1;
   pointer-events: auto;
@@ -59,64 +62,69 @@ html, body {
   gap: 10px;
 }
 
-/* Logo — MATCH .CLUB */
 .header-logo {
   width: 28px;
   height: 28px;
   flex-shrink: 0;
-  filter: drop-shadow(0 0 10px rgba(255,20,147,0.6));
+  filter: drop-shadow(0 0 8px rgba(255, 20, 147, 0.55));
 }
 
-/* Brand text */
 .brand-title {
   font-size: 0.82rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 1;
+  white-space: nowrap;
 }
-
-/* ===============================
-   HEADER LINK (Virtual Bar)
-================================ */
 
 .nav-link {
   font-size: 0.78rem;
   letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
   padding: 7px 16px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .nav-link:hover {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   transform: translateY(-1px);
 }
 
-/* HERO */
+/* ===============================
+   HERO
+================================ */
+
 .hero {
-  position: relative;
   min-height: 90vh;
+  padding-top: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  overflow: hidden;
 }
 
 .hero-inner {
-  position: relative;
-  z-index: 1;
   max-width: 640px;
   padding: 0 20px;
 }
 
+.hero-logo {
+  width: 120px;
+  margin-bottom: 28px;
+  filter: drop-shadow(0 0 18px rgba(255, 20, 147, 0.6));
+}
+
 .hero-title {
   font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 16px;
   background: linear-gradient(120deg, var(--accent), #ffffff);
   -webkit-background-clip: text;
   color: transparent;
-  margin-bottom: 16px;
 }
 
 .hero-tagline {
@@ -132,36 +140,11 @@ html, body {
   line-height: 1.7;
   color: var(--muted);
 }
-.hero {
-  padding-top: 120px;
-}
-@media (max-width: 768px) {
-  .hero {
-    padding-top: 96px;
-  }
-}
 
-/* =====================================================
-   HERO LOGO — MATCH .CLUB
-   ===================================================== */
+/* ===============================
+   CONTENT
+================================ */
 
-.hero-logo {
-  width: 120px;
-  height: auto;
-  margin-bottom: 28px;
-  filter: drop-shadow(0 0 8px rgba(255,20,147,0.55));
-
-}
-
-/* Mobile parity with .club */
-@media (max-width: 600px) {
-  .hero-logo {
-    width: 96px;
-    margin-bottom: 22px;
-  }
-}
-
-/* CONTENT */
 .content {
   max-width: 860px;
   margin: 0 auto;
@@ -176,7 +159,7 @@ html, body {
   background: var(--panel);
   padding: 32px;
   border-radius: 22px;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .section-title {
@@ -197,16 +180,23 @@ html, body {
   color: var(--muted);
 }
 
-/* LISTS */
+/* ===============================
+   LISTS
+================================ */
+
 .principles {
   padding-left: 18px;
 }
+
 .principles li {
   margin-bottom: 10px;
   color: var(--muted);
 }
 
-/* TIERS */
+/* ===============================
+   MEMBERSHIP TIERS
+================================ */
+
 .tiers {
   display: grid;
   gap: 12px;
@@ -215,7 +205,11 @@ html, body {
 .tier {
   padding: 14px 16px;
   border-radius: 14px;
-  background: rgba(255,255,255,0.04);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
   border-left: 3px solid var(--accent);
 }
 
@@ -228,50 +222,20 @@ html, body {
   font-size: 0.9rem;
   color: var(--muted);
 }
-/* =====================================================
-   MEMBERSHIP TIERS — SEMANTIC COLOR SYSTEM
-   ===================================================== */
 
-.tier {
-  border-left-width: 3px;
-}
+.tier-base { border-left-color: #ff1493; }
+.tier-base .tier-name { color: #ff1493; }
 
-/* BASE — Neon Pink */
-.tier-base {
-  border-left-color: #ff1493;
-}
+.tier-gold { border-left-color: #ffd700; }
+.tier-gold .tier-name { color: #ffd700; }
 
-.tier-base .tier-name {
-  color: #ff1493;
-}
+.tier-platinum { border-left-color: #e8e8e8; }
+.tier-platinum .tier-name { color: #e8e8e8; }
 
-/* GOLD — Polished Gold */
-.tier-gold {
-  border-left-color: #ffd700;
-}
+/* ===============================
+   TOKENOMICS
+================================ */
 
-.tier-gold .tier-name {
-  color: #ffd700;
-}
-
-/* PLATINUM — Chrome Silver */
-.tier-platinum {
-  border-left-color: #e8e8e8;
-}
-
-.tier-platinum .tier-name {
-  color: #e8e8e8;
-}
-.tier {
-  background:
-    linear-gradient(
-      to right,
-      rgba(255,255,255,0.06),
-      rgba(255,255,255,0.02)
-    );
-}
-
-/* TOKENOMICS */
 .tokenomics-wrap {
   display: flex;
   gap: 28px;
@@ -290,7 +254,7 @@ html, body {
     #c0c0c0 55% 75%,
     #2b2240 75% 100%
   );
-  box-shadow: 0 0 28px rgba(255,20,147,0.45);
+  box-shadow: 0 0 28px rgba(255, 20, 147, 0.45);
 }
 
 .token-legend {
@@ -317,20 +281,25 @@ html, body {
 .dot.members { background: #c0c0c0; }
 .dot.protocol { background: #2b2240; }
 
-/* DIVIDER */
 .protocol-divider {
   height: 1px;
   margin: 36px 0;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
 }
+
 /* ===============================
-   FOOTER — LOCKED & CENTERED
+   FOOTER — LOCKED
 ================================ */
 
 .site-footer {
   width: 100%;
   padding: 56px 16px 64px;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 
   display: flex;
   flex-direction: column;
@@ -359,63 +328,54 @@ html, body {
   transform: translateY(-1px);
 }
 
+.footer-icon-link svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
 .footer-meta {
   font-size: 0.75rem;
   color: var(--muted);
   white-space: nowrap;
 }
-@media (max-width: 600px) {
-  .footer-meta {
-    font-size: 0.7rem;
-    letter-spacing: 0.02em;
-  }
 
-  .footer-icons {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-/* =====================================================
-   MOBILE HEADER — MATCH .CLUB
-   ===================================================== */
+/* ===============================
+   MOBILE
+================================ */
 
 @media (max-width: 768px) {
-
   .top-nav {
     padding: 8px 12px;
-    grid-template-columns: auto 1fr auto; /* keep 3-column */
     width: calc(100% - 20px);
-  }
-
-  /* Left side: logo + name */
-  .nav-left {
-    gap: 8px;
-    min-width: 0;
   }
 
   .header-logo {
     width: 22px;
     height: 22px;
-    margin-right: 6px;
   }
 
   .brand-title {
     font-size: 0.72rem;
     letter-spacing: 0.12em;
-    white-space: nowrap;
   }
 
-  /* Right side: Virtual Bar pill */
   .nav-link {
     font-size: 0.7rem;
     padding: 5px 12px;
-    letter-spacing: 0.12em;
-    white-space: nowrap;
   }
-}
-@media (max-width: 768px) {
-  .top-nav {
-    align-items: center;
+
+  .hero {
+    padding-top: 96px;
+  }
+
+  .hero-logo {
+    width: 96px;
+    margin-bottom: 22px;
+  }
+
+  .footer-meta {
+    font-size: 0.7rem;
+    letter-spacing: 0.02em;
   }
 }
