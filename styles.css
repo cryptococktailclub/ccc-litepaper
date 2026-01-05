@@ -251,3 +251,83 @@ html, body {
   color: var(--muted);
   white-space: nowrap;
 }
+/* =====================================
+   VALUE CREATION LOOP
+===================================== */
+
+.value-loop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.loop-node {
+  min-width: 140px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.14);
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.loop-node strong {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.loop-node span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.loop-arrow {
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+/* Semantic colors */
+.loop-node.creators strong { color: #ff1493; }
+.loop-node.venues strong { color: #ffd700; }
+.loop-node.members strong { color: #c0c0c0; }
+.loop-node.protocol strong { color: #a59ac7; }
+/* =====================================
+   TIPZ INCENTIVE FLOW
+===================================== */
+
+.tipz-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.tipz-step {
+  width: 100%;
+  max-width: 420px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.14);
+  text-align: center;
+}
+
+.tipz-step strong {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.tipz-step span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.tipz-arrow {
+  color: var(--muted);
+  font-size: 1.2rem;
+}
