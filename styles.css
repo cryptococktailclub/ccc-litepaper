@@ -222,6 +222,48 @@ html, body {
   font-size: 0.9rem;
   color: var(--muted);
 }
+/* =====================================================
+   MEMBERSHIP TIERS — SEMANTIC COLOR SYSTEM
+   ===================================================== */
+
+.tier {
+  border-left-width: 3px;
+}
+
+/* BASE — Neon Pink */
+.tier-base {
+  border-left-color: #ff1493;
+}
+
+.tier-base .tier-name {
+  color: #ff1493;
+}
+
+/* GOLD — Polished Gold */
+.tier-gold {
+  border-left-color: #ffd700;
+}
+
+.tier-gold .tier-name {
+  color: #ffd700;
+}
+
+/* PLATINUM — Chrome Silver */
+.tier-platinum {
+  border-left-color: #e8e8e8;
+}
+
+.tier-platinum .tier-name {
+  color: #e8e8e8;
+}
+.tier {
+  background:
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0.06),
+      rgba(255,255,255,0.02)
+    );
+}
 
 /* TOKENOMICS */
 .tokenomics-wrap {
