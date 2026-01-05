@@ -15,7 +15,10 @@ html, body {
   font-family: "Inter", system-ui, sans-serif;
 }
 
-/* HEADER */
+/* ===============================
+   HEADER
+================================ */
+
 .top-nav {
   position: fixed;
   top: 16px;
@@ -33,30 +36,42 @@ html, body {
   opacity: 0;
   pointer-events: none;
   transition:
-  opacity 0.28s ease-out,
-  transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
-
+    opacity 0.28s ease-out,
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.top-nav.is-visible {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, 0);
+/* ===============================
+   HEADER BRAND — MATCH .CLUB
+================================ */
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
+/* Logo */
 .header-logo {
-  width: 28px;
-  height: 28px;
-  margin-right: 10px;
-  filter: drop-shadow(0 0 10px rgba(255,20,147,0.6));
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin: 0;
+  filter: drop-shadow(0 0 8px rgba(255,20,147,0.55));
 }
 
+/* Brand text */
 .brand-title {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
 }
+
+/* ===============================
+   HEADER LINK (Virtual Bar)
+================================ */
 
 .nav-link {
   font-size: 0.75rem;
