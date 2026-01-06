@@ -275,21 +275,32 @@ html, body {
     letter-spacing: 0.02em;
   }
 }
+.hero-title {
+  font-size: clamp(2.6rem, 4.4vw, 3.2rem);
+  line-height: 1.12;
+  margin-bottom: 22px;
+  letter-spacing: -0.01em;
 
+  white-space: nowrap;        /* FORCE single line on desktop */
+}
 .hero-subtitle {
-  max-width: 520px;
+  max-width: 560px;           /* CRITICAL: controls line count */
   margin: 0 auto;
+
   font-size: 1.05rem;
   line-height: 1.55;
   color: var(--muted);
+
+  text-wrap: balance;         /* modern browsers: cleaner line breaks */
 }
 @media (max-width: 600px) {
   .hero-title {
-    font-size: 2.05rem;
-    margin-bottom: 18px;
+    font-size: 2.1rem;
+    white-space: normal;      /* allow natural wrap if absolutely needed */
   }
 
   .hero-subtitle {
+    max-width: 300px;         /* tuned for EXACT two-line wrap */
     font-size: 0.95rem;
     line-height: 1.6;
   }
