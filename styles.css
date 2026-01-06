@@ -275,8 +275,22 @@ html, body {
     letter-spacing: 0.02em;
   }
 }
+
 .hero-subtitle {
-  max-width: 520px;   /* critical for 2-line lock */
+  max-width: 520px;
   margin: 0 auto;
+  font-size: 1.05rem;
   line-height: 1.55;
+  color: var(--muted);
+}
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.05rem;
+    margin-bottom: 18px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
 }
