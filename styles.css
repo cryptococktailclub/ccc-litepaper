@@ -103,13 +103,7 @@ html, body {
   max-width: 760px;   /* narrower than container for readability */
   margin-left: auto;
   margin-right: auto;
-}
 
-.hero-subtitle {
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.55;
 }
 .hero {
   padding-bottom: 40px;
@@ -314,35 +308,36 @@ html, body {
     white-space: normal;      /* allow natural wrap if absolutely needed */
   }
 
-  .hero-subtitle {
-    max-width: 300px;         /* tuned for EXACT two-line wrap */
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-}
-.hero-subtitle {
-  max-width: none;            /* remove wrapping constraint on desktop */
-  white-space: nowrap;        /* FORCE one line */
-  margin: 0 auto;
-
-  font-size: 1.05rem;
-  line-height: 1.55;
-  color: var(--muted);
-}
-@media (max-width: 600px) {
-  .hero-subtitle {
-    max-width: 320px;      /* critical: tuned for 2-line wrap */
-    margin-left: auto;
-    margin-right: auto;
-
-    font-size: 0.95rem;
-    line-height: 1.55;
-    white-space: normal;   /* allow wrapping */
-  }
-}
-
 @media (max-width: 600px) {
   .hero-inner,
   .content {
     max-width: 100%;
   }
+/* =====================================================
+   HERO SUBTITLE — LOCKED LINE CONTROL
+   ===================================================== */
+
+/* Desktop / Laptop — single line */
+.hero-subtitle {
+  max-width: 900px;
+  margin: 0 auto;
+
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--muted);
+
+  white-space: nowrap;   /* FORCE 1 line */
+}
+
+/* Mobile — EXACTLY two lines */
+@media (max-width: 600px) {
+  .hero-subtitle {
+    max-width: 332px;    /* calibrated for 2-line wrap */
+    white-space: normal;
+
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
