@@ -341,3 +341,17 @@ html, body {
     margin-right: auto;
   }
 }
+/* Desktop: force single line */
+.hero-subtitle {
+  white-space: nowrap;
+}
+
+/* Mobile: allow clean wrap */
+@media (max-width: 600px) {
+  .hero-subtitle {
+    white-space: normal;
+    max-width: 320px; /* guarantees 2-line wrap */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
