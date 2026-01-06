@@ -275,3 +275,8 @@ html, body {
     letter-spacing: 0.02em;
   }
 }
+.hero-subtitle {
+  max-width: 520px;   /* critical for 2-line lock */
+  margin: 0 auto;
+  line-height: 1.55;
+}
