@@ -337,3 +337,14 @@ html, body {
     line-height: 1.6;
   }
 }
+@media (max-width: 600px) {
+  .hero-inner,
+  .content {
+    max-width: 100%;
+  }
+
+  .hero-title,
+  .hero-subtitle {
+    max-width: 100%;
+  }
+}
