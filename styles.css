@@ -176,3 +176,44 @@ html, body {
   .hero-logo { width: 96px; }
   .footer-meta { font-size: .7rem; }
 }
+/* =====================================================
+   HEADER BRAND — MOBILE PARITY WITH .CLUB
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  .top-nav {
+    padding: 8px 12px;
+    width: calc(100% - 20px);
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;              /* tighter like .club */
+    min-width: 0;
+    flex-wrap: nowrap;     /* CRITICAL: prevent wrapping */
+  }
+
+  .header-logo {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
+  .brand-title {
+    font-size: 0.68rem;    /* matches .club mobile */
+    letter-spacing: 0.11em;
+    line-height: 1;
+    white-space: nowrap;  /* FORCE single line */
+    overflow: hidden;
+    text-overflow: clip;
+  }
+
+  .nav-link {
+    font-size: 0.7rem;
+    padding: 5px 12px;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+  }
+}
