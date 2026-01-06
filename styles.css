@@ -75,9 +75,11 @@ html, body {
 }
 
 .hero-inner {
-  max-width: 680px;
+  max-width: 860px;   /* match .content */
   padding: 0 20px;
+  margin: 0 auto;
 }
+
 
 /* HERO LOGO — MATCH .CLUB EXACTLY */
 .hero-logo {
@@ -98,14 +100,23 @@ html, body {
 }
 
 .hero-title {
-  font-size: clamp(2rem,5vw,3rem);
-  margin-bottom: 14px;
+  max-width: 760px;   /* narrower than container for readability */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-subtitle {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: var(--muted);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.55;
+}
+.hero {
+  padding-bottom: 40px;
+}
+
+.content {
+  padding-top: 40px;
 }
 
 /* CONTENT */
