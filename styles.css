@@ -331,12 +331,16 @@ html, body {
 }
 @media (max-width: 600px) {
   .hero-subtitle {
-    white-space: normal;      /* allow wrap */
-    max-width: 300px;         /* tuned for clean 2-line break */
+    max-width: 320px;      /* critical: tuned for 2-line wrap */
+    margin-left: auto;
+    margin-right: auto;
+
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.55;
+    white-space: normal;   /* allow wrapping */
   }
 }
+
 @media (max-width: 600px) {
   .hero-inner,
   .content {
