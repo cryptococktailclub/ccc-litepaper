@@ -346,9 +346,3 @@ html, body {
   .content {
     max-width: 100%;
   }
-
-  .hero-title,
-  .hero-subtitle {
-    max-width: 100%;
-  }
-}
