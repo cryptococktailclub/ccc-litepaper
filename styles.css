@@ -189,6 +189,23 @@ html, body {
   margin: 0 auto;
   line-height: 1.6;
 }
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 24px;
+}
+
+.footer-icon-link svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--muted);
+  transition: fill 0.2s ease;
+}
+
+.footer-icon-link:hover svg {
+  fill: var(--text);
+}
 
 /* =========================
    Mobile
