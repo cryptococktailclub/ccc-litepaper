@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Crypto Cocktail Club — Protocol Whitepaper</title>
-  <meta name="description" content="Crypto Cocktail Club (CCC) protocol whitepaper authored by Michael Newton, Founder & CEO." />
+  <meta name="description" content="Crypto Cocktail Club (CCC) protocol whitepaper v1.1 authored by Michael Newton, Founder & CEO." />
 
-  <!-- Shared site styles (includes header styles) -->
+  <!-- Shared site styles (includes floating header styles) -->
   <link rel="stylesheet" href="/styles.css" />
 
   <style>
     /* =========================
-       Whitepaper Typography
+       Whitepaper Typography (v1.1)
        ========================= */
 
     :root {
@@ -45,13 +45,6 @@
       letter-spacing: -0.015em;
     }
 
-    .ccc-whitepaper h3 {
-      margin-top: 40px;
-      margin-bottom: 10px;
-      font-size: 18px;
-      font-weight: 600;
-    }
-
     .ccc-whitepaper p {
       margin: 14px 0;
       font-size: 16px;
@@ -64,7 +57,7 @@
     }
 
     .ccc-whitepaper li {
-      margin: 6px 0;
+      margin: 10px 0;
       font-size: 15px;
       color: var(--wp-text);
     }
@@ -124,27 +117,17 @@
 
 <body>
 
-<!-- FLOATING HEADER (EXACT MATCH TO .CLUB) -->
+<!-- FLOATING HEADER (MATCHES .CLUB / LITEPAPER) -->
 <header class="top-nav" id="topNav">
   <div class="brand">
-    <img
-      src="/assets/ccc-logo.png"
-      class="ccc-logo"
-      alt="Crypto Cocktail Club"
-    />
+    <img src="/assets/ccc-logo.png" class="ccc-logo" alt="Crypto Cocktail Club" />
     <span class="brand-title">Crypto Cocktail Club</span>
   </div>
 
   <nav class="nav-right">
-    <a
-      href="https://cryptococktail.club"
-      class="nav-link"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a href="https://cryptococktail.club" class="nav-link" target="_blank" rel="noopener noreferrer">
       Virtual Bar
     </a>
-
     <a href="/" class="nav-link">
       Litepaper
     </a>
@@ -153,38 +136,34 @@
 
 <main class="ccc-whitepaper">
 
+  <!-- HEADER -->
   <header>
     <h1>Crypto Cocktail Club Protocol Whitepaper</h1>
 
     <div class="ccc-meta">
-      <div><strong>Version:</strong> 1.0</div>
+      <div><strong>Version:</strong> 1.1</div>
       <div><strong>Status:</strong> Public / Informational</div>
       <div><strong>Last Updated:</strong> January 2026</div>
       <div><strong>Authored by:</strong> Michael Newton, Founder & CEO</div>
     </div>
 
     <div class="ccc-whitepaper-actions">
-      <a
-        href="/whitepaper/CCC_Protocol_Whitepaper_v1.pdf"
-        target="_blank"
-        rel="noopener"
-      >
+      <a href="/whitepaper/CCC_Protocol_Whitepaper_v1.1.pdf" target="_blank" rel="noopener">
         Download PDF
       </a>
     </div>
   </header>
 
+  <!-- SECTIONS 1–8 (UNCHANGED) -->
   <section>
     <h2>1. Executive Summary</h2>
     <p>
-      Crypto Cocktail Club (CCC) is an event-driven hospitality protocol designed
-      to modernize how cocktail culture, venues, and creators coordinate value—
-      without turning bars into crypto businesses.
+      Crypto Cocktail Club (CCC) is an event-driven hospitality protocol designed to modernize how
+      cocktail culture, venues, and creators coordinate value—without turning bars into crypto businesses.
     </p>
     <p>
-      CCC introduces a <strong>non-financial on-chain protocol</strong> that uses
-      NFTs for access and redeemable experiences while settling venues and creators
-      off-chain like brand activations.
+      CCC introduces a <strong>non-financial on-chain protocol</strong> that uses NFTs for access and
+      redeemable experiences while settling venues and creators off-chain like brand activations.
     </p>
   </section>
 
@@ -239,7 +218,7 @@
   </section>
 
   <section>
-    <h2>6. Escrow & Settlement Model</h2>
+    <h2>6. Escrow &amp; Settlement Model</h2>
     <p>
       ETH is routed deterministically on-chain and held in escrow only when required.
       All ETH-to-stablecoin or fiat conversion occurs off-chain under CCC treasury operations.
@@ -259,9 +238,87 @@
   <section>
     <h2>8. Conclusion</h2>
     <p>
-      Crypto Cocktail Club provides a pragmatic bridge between hospitality and blockchain
-      by centralizing complexity at the protocol layer while preserving operator simplicity
-      and compliance.
+      Crypto Cocktail Club provides a pragmatic bridge between hospitality and blockchain by centralizing
+      complexity at the protocol layer while preserving operator simplicity and compliance.
+    </p>
+  </section>
+
+  <!-- v1.1 ADDITIONS -->
+  <section>
+    <h2>9. Phased Deployment Strategy</h2>
+    <p>
+      Crypto Cocktail Club is being deployed deliberately through phased execution rather than speculative scale.
+    </p>
+    <p>
+      Each phase validates operational assumptions, hardens protocol infrastructure,
+      and aligns incentives across creators, venues, and partners.
+    </p>
+    <ul>
+      <li><strong>Phase I — Pilot Activations:</strong> Limited creator cohort, select venues, manual settlement, UX validation.</li>
+      <li><strong>Phase II — Protocol Hardening:</strong> EscrowVault live, automated routing, external audit, expanded brand activations.</li>
+      <li><strong>Phase III — Network Expansion:</strong> Broader venue onboarding, membership scaling, international rollout.</li>
+    </ul>
+    <p>
+      Phases are operational milestones, not timelines or guarantees.
+    </p>
+  </section>
+
+  <section>
+    <h2>10. Risks &amp; Design Tradeoffs</h2>
+    <ul>
+      <li><strong>Adoption Risk:</strong> Network effects may develop slower than anticipated.</li>
+      <li><strong>Operational Centralization:</strong> Early treasury operations are centralized.</li>
+      <li><strong>Market Dynamics:</strong> Secondary NFT markets may be thin or volatile.</li>
+      <li><strong>Regulatory Interpretation:</strong> Jurisdictional rules may evolve.</li>
+      <li><strong>Execution Risk:</strong> Technical or partnership dependencies may impact rollout.</li>
+    </ul>
+    <p>
+      Architectural restraint limits downside exposure should these risks materialize.
+    </p>
+  </section>
+
+  <section>
+    <h2>11. Security &amp; Audit Posture</h2>
+    <p>
+      Security is enforced through surface-area minimization and deterministic logic.
+    </p>
+    <ul>
+      <li>No swaps, oracles, or price feeds</li>
+      <li>No stablecoin custody</li>
+      <li>No consumer speculative balances</li>
+      <li>Deterministic allocation routing</li>
+    </ul>
+    <p>
+      Third-party audits are intended prior to expanded deployment, focusing on allocation correctness and access control.
+    </p>
+  </section>
+
+  <section>
+    <h2>12. Governance &amp; Control Model</h2>
+    <p>
+      CCC operates under centralized governance during early phases by design.
+    </p>
+    <p>
+      No DAO or token-based governance is employed in Version 1.1.
+      Ownership of NFTs or TIPZ confers no governance rights.
+    </p>
+    <p>
+      Governance may evolve after sustained product-market fit is achieved.
+    </p>
+  </section>
+
+  <section>
+    <h2>13. Measuring Protocol Success</h2>
+    <ul>
+      <li>Active creators minting Cocktail NFTs</li>
+      <li>Redemption completion rate</li>
+      <li>Repeat participation by venues</li>
+      <li>Settlement accuracy and timeliness</li>
+      <li>TIP pool distribution effectiveness</li>
+      <li>Brand activation retention</li>
+    </ul>
+    <p>
+      Success is measured through real-world execution, not speculative metrics.
     </p>
   </section>
 
@@ -275,7 +332,7 @@
   </p>
 </footer>
 
-<!-- SCROLL CONTROLLER (MUST LOAD LAST) -->
+<!-- FLOATING HEADER SCROLL CONTROLLER -->
 <script src="./script.js"></script>
 
 </body>
