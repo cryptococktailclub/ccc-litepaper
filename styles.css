@@ -86,15 +86,11 @@ html, body {
 }
 
 .nav-link {
-  font-family: "Inter", system-ui, sans-serif;
   font-size: 14px;
   font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
   color: var(--muted);
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: var(--text);
 }
 
 /* Scroll hide */
