@@ -85,6 +85,22 @@ html, body {
   border-bottom: 1px solid var(--accent);
   padding-bottom: 2px;
 }
+/* =========================
+   Header Scroll Behavior (.club match)
+   ========================= */
+
+.top-nav {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  will-change: transform, opacity;
+}
+
+.top-nav.nav-hidden {
+  transform: translate(-50%, -120%);
+  opacity: 0;
+}
+.hero {
+  padding-top: 120px;
+}
 
 /* =========================
    Hero (Tightened)
