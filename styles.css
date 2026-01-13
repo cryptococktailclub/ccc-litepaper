@@ -21,7 +21,7 @@ html, body {
 }
 
 /* =========================
-   Header — CCC Unified (.club exact)
+   Floating Header (Canonical)
    ========================= */
 
 .top-nav {
@@ -30,32 +30,31 @@ html, body {
   left: 50%;
   transform: translateX(-50%);
   width: min(1180px, 94%);
-  z-index: 100;
-}
-
-.top-nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 14px 20px;
   border-radius: 999px;
   background: rgba(5,1,15,0.92);
   border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
-/* Left brand cluster */
-.nav-left {
+/* Brand cluster */
+.brand {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.header-logo {
+.ccc-logo {
   height: 28px;
   width: auto;
 }
 
 .brand-title {
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -63,15 +62,16 @@ html, body {
   white-space: nowrap;
 }
 
-/* Right nav */
+/* Nav */
 .nav-right {
   display: flex;
-  align-items: center;
   gap: 22px;
 }
 
 .nav-link {
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 14px;
+  font-weight: 400;
   color: var(--muted);
   text-decoration: none;
 }
@@ -80,26 +80,10 @@ html, body {
   color: var(--text);
 }
 
-.nav-link-emphasis {
-  color: var(--text);
-  border-bottom: 1px solid var(--accent);
-  padding-bottom: 2px;
-}
-/* =========================
-   Header Scroll Behavior (.club match)
-   ========================= */
-
-.top-nav {
-  transition: transform 0.35s ease, opacity 0.35s ease;
-  will-change: transform, opacity;
-}
-
+/* Scroll hide */
 .top-nav.nav-hidden {
   transform: translate(-50%, -120%);
   opacity: 0;
-}
-.hero {
-  padding-top: 120px;
 }
 
 /* =========================
