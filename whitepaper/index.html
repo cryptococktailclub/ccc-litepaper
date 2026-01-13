@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Crypto Cocktail Club — Protocol Whitepaper</title>
   <meta name="description" content="Crypto Cocktail Club (CCC) protocol whitepaper authored by Michael Newton, Founder & CEO." />
 
-  <!-- Basic styles assume existing litepaper CSS is loaded site-wide -->
+  <!-- Shared site styles (includes header styles) -->
   <link rel="stylesheet" href="/styles.css" />
 
   <style>
     /* =========================
-       CCC Whitepaper Typography
-       Aligned to Litepaper CSS
+       Whitepaper Typography
        ========================= */
 
     :root {
@@ -23,7 +23,7 @@
 
     .ccc-whitepaper {
       max-width: 860px;
-      margin: 96px auto 120px;
+      margin: 140px auto 120px; /* offset for floating header */
       padding: 0 20px;
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.7;
@@ -112,7 +112,7 @@
 
     @media (max-width: 640px) {
       .ccc-whitepaper {
-        margin: 72px auto 96px;
+        margin-top: 120px;
       }
 
       .ccc-whitepaper h2 {
@@ -121,12 +121,11 @@
     }
   </style>
 </head>
-<script src="./script.js"></script>
 
 <body>
-<!-- FLOATING HEADER (Shared CCC Header) -->
-<header class="top-nav" id="topNav">
 
+<!-- FLOATING HEADER (EXACT MATCH TO .CLUB) -->
+<header class="top-nav" id="topNav">
   <div class="brand">
     <img
       src="/assets/ccc-logo.png"
@@ -146,127 +145,138 @@
       Virtual Bar
     </a>
 
-    <a
-      href="/"
-      class="nav-link"
-    >
+    <a href="/" class="nav-link">
       Litepaper
     </a>
   </nav>
 </header>
 
-  <main class="ccc-whitepaper">
+<main class="ccc-whitepaper">
 
-    <header>
-      <h1>Crypto Cocktail Club Protocol Whitepaper</h1>
-      <div class="ccc-meta">
-        <div><strong>Version:</strong> 1.0</div>
-        <div><strong>Status:</strong> Public / Informational</div>
-        <div><strong>Last Updated:</strong> January 2026</div>
-        <div><strong>Authored by:</strong> Michael Newton, Founder & CEO</div>
-      </div>
+  <header>
+    <h1>Crypto Cocktail Club Protocol Whitepaper</h1>
 
-      <div class="ccc-whitepaper-actions">
-        <a href="/whitepaper/CCC_Protocol_Whitepaper_v1.pdf" target="_blank" rel="noopener">
-          Download PDF
-        </a>
-      </div>
-    </header>
+    <div class="ccc-meta">
+      <div><strong>Version:</strong> 1.0</div>
+      <div><strong>Status:</strong> Public / Informational</div>
+      <div><strong>Last Updated:</strong> January 2026</div>
+      <div><strong>Authored by:</strong> Michael Newton, Founder & CEO</div>
+    </div>
 
-    <section id="executive-summary">
-      <h2>1. Executive Summary</h2>
-      <p>
-        Crypto Cocktail Club (CCC) is an event-driven hospitality protocol designed to modernize how cocktail culture, venues, and creators coordinate value—without turning bars into crypto businesses.
-      </p>
-      <p>
-        CCC introduces a <strong>non-financial on-chain protocol</strong> that uses NFTs for access and redeemable experiences while settling venues and creators off-chain like brand activations.
-      </p>
-    </section>
+    <div class="ccc-whitepaper-actions">
+      <a
+        href="/whitepaper/CCC_Protocol_Whitepaper_v1.pdf"
+        target="_blank"
+        rel="noopener"
+      >
+        Download PDF
+      </a>
+    </div>
+  </header>
 
-    <section id="problem">
-      <h2>2. Problem Statement</h2>
-      <p>Hospitality is culturally rich but economically misaligned.</p>
-      <ul>
-        <li>Bartenders create intellectual property but rarely receive royalties</li>
-        <li>Venues operate on thin margins with limited upside</li>
-        <li>Brand activations are opaque and difficult to reconcile</li>
-        <li>Crypto payment models introduce regulatory and UX friction</li>
-      </ul>
-    </section>
-
-    <section id="principles">
-      <h2>3. Design Principles</h2>
-      <ul>
-        <li>Bars never accept crypto from guests</li>
-        <li>Creators are paid immediately</li>
-        <li>Venues are insulated from volatility</li>
-        <li>No on-chain payments or swaps</li>
-        <li>Settlement mirrors brand activations</li>
-        <li>Compliance enforced by architectural absence</li>
-      </ul>
-    </section>
-
-    <section id="overview">
-      <h2>4. Protocol Overview</h2>
-      <ul>
-        <li>Membership NFTs (ERC-1155)</li>
-        <li>Cocktail NFTs (ERC-721)</li>
-        <li>TIPZ engagement utility (restricted ERC-20)</li>
-        <li>EscrowVault for deferred funds</li>
-        <li>Off-chain CCC treasury settlement</li>
-      </ul>
-    </section>
-
-    <section id="economics">
-      <h2>5. Cocktail NFT Economics</h2>
-      <p><strong>Primary Mint Distribution (100%)</strong></p>
-      <ul>
-        <li>90% → Venue providing service</li>
-        <li>3% → Cocktail creator (paid immediately)</li>
-        <li>5% → Bartender TIP pool (escrowed)</li>
-        <li>2% → CCC protocol fee</li>
-      </ul>
-
-      <p><strong>Secondary Market</strong></p>
-      <ul>
-        <li>5% resale royalty → CCC protocol (EIP-2981)</li>
-        <li>No creator or venue resale royalties</li>
-      </ul>
-    </section>
-
-    <section id="settlement">
-      <h2>6. Escrow & Settlement Model</h2>
-      <p>
-        ETH is routed deterministically on-chain and held in escrow only when required. All ETH-to-stablecoin or fiat conversion occurs off-chain under CCC treasury operations.
-      </p>
-    </section>
-
-    <section id="compliance">
-      <h2>7. Compliance Posture</h2>
-      <ul>
-        <li>No on-chain swaps or oracles</li>
-        <li>No stablecoin custody</li>
-        <li>No consumer cash-out mechanisms</li>
-        <li>Venues never interact with crypto</li>
-      </ul>
-    </section>
-
-    <section id="conclusion">
-      <h2>8. Conclusion</h2>
-      <p>
-        Crypto Cocktail Club provides a pragmatic bridge between hospitality and blockchain by centralizing complexity at the protocol level while preserving operator simplicity and compliance.
-      </p>
-    </section>
-
-  </main>
-
-  <footer class="ccc-footer-disclaimer">
+  <section>
+    <h2>1. Executive Summary</h2>
     <p>
-      <strong>For informational purposes only.</strong>
-      Nothing on this site constitutes financial, legal, or investment advice,
-      or an offer to buy or sell any security or financial instrument.
+      Crypto Cocktail Club (CCC) is an event-driven hospitality protocol designed
+      to modernize how cocktail culture, venues, and creators coordinate value—
+      without turning bars into crypto businesses.
     </p>
-  </footer>
+    <p>
+      CCC introduces a <strong>non-financial on-chain protocol</strong> that uses
+      NFTs for access and redeemable experiences while settling venues and creators
+      off-chain like brand activations.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Problem Statement</h2>
+    <ul>
+      <li>Bartenders create intellectual property but rarely receive royalties</li>
+      <li>Venues operate on thin margins with limited upside</li>
+      <li>Brand activations are opaque and difficult to reconcile</li>
+      <li>Crypto payment models introduce regulatory and UX friction</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. Design Principles</h2>
+    <ul>
+      <li>Bars never accept crypto from guests</li>
+      <li>Creators are paid immediately</li>
+      <li>Venues are insulated from volatility</li>
+      <li>No on-chain payments or swaps</li>
+      <li>Settlement mirrors brand activations</li>
+      <li>Compliance enforced by architectural absence</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. Protocol Overview</h2>
+    <ul>
+      <li>Membership NFTs (ERC-1155)</li>
+      <li>Cocktail NFTs (ERC-721)</li>
+      <li>TIPZ engagement utility (restricted ERC-20)</li>
+      <li>EscrowVault for deferred funds</li>
+      <li>Off-chain CCC treasury settlement</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. Cocktail NFT Economics</h2>
+    <p><strong>Primary Mint Distribution (100%)</strong></p>
+    <ul>
+      <li>90% → Venue providing service</li>
+      <li>3% → Cocktail creator (paid immediately)</li>
+      <li>5% → Bartender TIP pool (escrowed)</li>
+      <li>2% → CCC protocol fee</li>
+    </ul>
+
+    <p><strong>Secondary Market</strong></p>
+    <ul>
+      <li>5% resale royalty → CCC protocol (EIP-2981)</li>
+      <li>No creator or venue resale royalties</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Escrow & Settlement Model</h2>
+    <p>
+      ETH is routed deterministically on-chain and held in escrow only when required.
+      All ETH-to-stablecoin or fiat conversion occurs off-chain under CCC treasury operations.
+    </p>
+  </section>
+
+  <section>
+    <h2>7. Compliance Posture</h2>
+    <ul>
+      <li>No on-chain swaps or oracles</li>
+      <li>No stablecoin custody</li>
+      <li>No consumer cash-out mechanisms</li>
+      <li>Venues never interact with crypto</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>8. Conclusion</h2>
+    <p>
+      Crypto Cocktail Club provides a pragmatic bridge between hospitality and blockchain
+      by centralizing complexity at the protocol layer while preserving operator simplicity
+      and compliance.
+    </p>
+  </section>
+
+</main>
+
+<footer class="ccc-footer-disclaimer">
+  <p>
+    <strong>For informational purposes only.</strong>
+    Nothing on this site constitutes financial, legal, or investment advice,
+    or an offer to buy or sell any security or financial instrument.
+  </p>
+</footer>
+
+<!-- SCROLL CONTROLLER (MUST LOAD LAST) -->
+<script src="./script.js"></script>
 
 </body>
 </html>
