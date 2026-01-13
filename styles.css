@@ -245,3 +245,11 @@ html, body {
     margin-top: 72px;
   }
 }
+.top-nav {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.top-nav.nav-hidden {
+  transform: translate(-50%, -120%);
+  opacity: 0;
+}
