@@ -21,39 +21,41 @@ html, body {
 }
 
 /* =========================
-   Header (top-nav)
+   Header — CCC Unified (.club match)
    ========================= */
 
 .top-nav {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1180px, 94%);
   z-index: 100;
+}
+
+.top-nav-inner {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
   padding: 14px 20px;
+  border-radius: 999px;
   background: rgba(5,1,15,0.92);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
 .header-logo {
   height: 28px;
 }
 
-.brand-title {
-  font-size: 14px;
-  letter-spacing: 0.08em;
-}
-
-.nav-right {
+.nav-center {
   display: flex;
-  gap: 20px;
+  justify-content: flex-end;
+  gap: 22px;
 }
 
 .nav-link {
