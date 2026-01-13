@@ -1,26 +1,34 @@
-/* =====================================================
-   CCC Litepaper — Header Reveal (Fixed)
-   ===================================================== */
+// CCC Floating Header Scroll Controller
+// Canonical behavior shared across .club and .com
 
 (function () {
-  const header = document.querySelector(".top-nav");
+  const header = document.getElementById("topNav");
   if (!header) return;
 
-  function revealHeader(force = false) {
-    if (force || window.scrollY > 40) {
-      header.classList.add("is-visible");
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+
+  const SCROLL_HIDE_THRESHOLD = 80; // px before header can hide
+
+  function onScroll() {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > SCROLL_HIDE_THRESHOLD) {
+      // Scrolling down
+      header.classList.add("nav-hidden");
     } else {
-      header.classList.remove("is-visible");
+      // Scrolling up
+      header.classList.remove("nav-hidden");
     }
+
+    lastScrollY = currentScrollY;
+    ticking = false;
   }
 
-  /* Reveal after first paint (matches .club) */
-  window.addEventListener("load", () => {
-    revealHeader(true);
-  });
-
-  /* Scroll behavior */
   window.addEventListener("scroll", () => {
-    revealHeader(false);
-  }, { passive: true });
+    if (!ticking) {
+      window.requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+  });
 })();
