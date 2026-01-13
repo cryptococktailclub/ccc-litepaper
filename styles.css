@@ -355,3 +355,28 @@ html, body {
     margin-right: auto;
   }
 }
+/* =========================
+   CCC Litepaper Legal Disclaimer
+   ========================= */
+
+.ccc-litepaper-disclaimer {
+  max-width: 960px;
+  margin: 64px auto 32px;
+  padding: 16px 20px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #9a9a9a;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.ccc-litepaper-disclaimer strong {
+  color: #666;
+  font-weight: 500;
+}
+@media (max-width: 640px) {
+  .ccc-litepaper-disclaimer {
+    font-size: 11px;
+    margin: 40px 16px 24px;
+  }
+}
