@@ -25,6 +25,24 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/styles.css" />
 </head>
+<script>
+  let lastScrollY = window.scrollY;
+  const header = document.querySelector('.top-nav');
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 80) {
+      // Scrolling down
+      header.classList.add('nav-hidden');
+    } else {
+      // Scrolling up
+      header.classList.remove('nav-hidden');
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>
 
 <body>
 
