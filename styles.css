@@ -1,3 +1,7 @@
+/* =========================
+   Base
+   ========================= */
+
 :root {
   --bg: #05010f;
   --text: #f8f5ff;
@@ -5,378 +9,146 @@
   --accent: #ff1493;
 }
 
-/* RESET */
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* HEADER */
-.top-nav {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translate(-50%, -12px);
-  width: min(1180px, 94%);
+/* =========================
+   Header
+   ========================= */
+
+.ccc-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(5, 1, 15, 0.92);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.ccc-header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
   padding: 14px 20px;
-  border-radius: 999px;
-  background: rgba(5,1,15,0.92);
-  border: 1px solid rgba(255,255,255,0.08);
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .25s ease, transform .4s ease;
-}
-
-.top-nav.is-visible {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, 0);
-}
-
-.nav-left {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
 }
 
-.header-logo {
-  width: 28px;
-}
-
-.brand-title {
-  font-size: .82rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
+.ccc-logo {
   font-weight: 600;
+  letter-spacing: 0.08em;
 }
 
-.nav-link {
-  font-size: .78rem;
-  padding: 7px 16px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.18);
-  text-decoration: none;
-  color: #fff;
-}
-
-/* HERO */
-.hero {
-  min-height: 90vh;
+.ccc-nav {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  gap: 22px;
 }
 
-.hero-inner {
-  max-width: 860px;   /* match .content */
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-
-/* HERO LOGO — MATCH .CLUB EXACTLY */
-.hero-logo {
-  width: 120px;
-  height: auto;
-  margin-bottom: 28px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-  filter: drop-shadow(0 0 18px rgba(255, 20, 147, 0.6));
-}
-@media (max-width: 600px) {
-  .hero-logo {
-    width: 96px;
-    margin-bottom: 22px;
-  }
-}
-
-.hero-title {
-  max-width: 760px;   /* narrower than container for readability */
-  margin-left: auto;
-  margin-right: auto;
-
-}
-.hero {
-  padding-bottom: 40px;
-}
-
-.content {
-  padding-top: 40px;
-}
-
-/* CONTENT */
-.content {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 80px 20px 120px;
-}
-
-.section {
-  margin-bottom: 72px;
-}
-
-.section-title {
-  font-size: .85rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-}
-
-.section p {
+.ccc-nav a {
   color: var(--muted);
-  line-height: 1.7;
-  margin-bottom: 14px;
+  text-decoration: none;
+  font-size: 14px;
 }
 
-/* FLOW DIAGRAM */
-.protocol-flow {
-  margin: 36px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.flow-step {
-  padding: 10px 18px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.18);
-  font-size: .75rem;
-  background: rgba(255,255,255,.04);
-}
-
-.flow-arrow {
-  opacity: .5;
-}
-
-/* FOOTER ICONS — HARD FIX */
-.footer-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-}
-
-.footer-icon-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
+.ccc-nav a:hover {
   color: var(--text);
 }
 
-.footer-icon-link svg {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-  display: block;
-  shape-rendering: geometricPrecision;
+.ccc-nav-cta {
+  color: var(--text);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
 }
 
-.footer-icon-link:hover {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .hero-logo { width: 96px; }
-  .footer-meta { font-size: .7rem; }
-}
-/* =====================================================
-   HEADER BRAND — MOBILE PARITY WITH .CLUB
-   ===================================================== */
-
-@media (max-width: 768px) {
-
-  .top-nav {
-    padding: 8px 12px;
-    width: calc(100% - 20px);
-  }
-
-  .nav-left {
-    display: flex;
-    align-items: center;
-    gap: 6px;              /* tighter like .club */
-    min-width: 0;
-    flex-wrap: nowrap;     /* CRITICAL: prevent wrapping */
-  }
-
-  .header-logo {
-    width: 22px;
-    height: 22px;
-    flex-shrink: 0;
-  }
-
-  .brand-title {
-    font-size: 0.68rem;    /* matches .club mobile */
-    letter-spacing: 0.11em;
-    line-height: 1;
-    white-space: nowrap;  /* FORCE single line */
-    overflow: hidden;
-    text-overflow: clip;
-  }
-
-  .nav-link {
-    font-size: 0.7rem;
-    padding: 5px 12px;
-    letter-spacing: 0.12em;
-    white-space: nowrap;
-  }
-}
-/* =====================================================
-   FOOTER — HARD LOCK CENTER (DESKTOP + MOBILE)
-   ===================================================== */
-
-.site-footer {
-  width: 100%;
-  padding: 56px 16px 64px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;     /* HARD CENTER */
-  justify-content: center;
-  text-align: center;
-
-  margin: 0 auto;
-}
-
-/* ICON ROW */
-.site-footer .footer-icons {
-  width: 100%;
-  display: flex;
-  justify-content: center; /* FORCE CENTER */
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 18px;
-}
-
-/* ICON LINKS */
-.site-footer .footer-icon-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-}
-
-/* FOOTER TEXT */
-.site-footer .footer-meta {
-  width: 100%;
-  text-align: center;      /* FORCE CENTER */
-  margin: 0;
-  font-size: 0.75rem;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-/* MOBILE SAFETY */
-@media (max-width: 600px) {
-  .site-footer {
-    padding: 48px 12px 56px;
-  }
-
-  .site-footer .footer-meta {
-    font-size: 0.7rem;
-    letter-spacing: 0.02em;
-  }
-}
-.hero-title {
-  font-size: clamp(2.6rem, 4.4vw, 3.2rem);
-  line-height: 1.12;
-  margin-bottom: 22px;
-  letter-spacing: -0.01em;
-
-  white-space: nowrap;        /* FORCE single line on desktop */
-
-}
-@media (max-width: 600px) {
-  .hero-title {
-    font-size: 2.1rem;
-    white-space: normal;      /* allow natural wrap if absolutely needed */
-  }
-
-@media (max-width: 600px) {
-  .hero-inner,
-  .content {
-    max-width: 100%;
-  }
-/* =====================================================
-   HERO SUBTITLE — LOCKED LINE CONTROL
-   ===================================================== */
-
-/* Desktop / Laptop — single line */
-.hero-subtitle {
-  max-width: 900px;
-  margin: 0 auto;
-
-  font-size: 1.05rem;
-  line-height: 1.55;
-  color: var(--muted);
-
-  white-space: nowrap;   /* FORCE 1 line */
-}
-
-/* Mobile — EXACTLY two lines */
-@media (max-width: 600px) {
-  .hero-subtitle {
-    max-width: 332px;    /* calibrated for 2-line wrap */
-    white-space: normal;
-
-    font-size: 0.95rem;
-    line-height: 1.55;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-/* Desktop: force single line */
-.hero-subtitle {
-  white-space: nowrap;
-}
-
-/* Mobile: allow clean wrap */
-@media (max-width: 600px) {
-  .hero-subtitle {
-    white-space: normal;
-    max-width: 320px; /* guarantees 2-line wrap */
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 /* =========================
-   CCC Litepaper Legal Disclaimer
+   Main Layout
    ========================= */
 
-.ccc-litepaper-disclaimer {
-  max-width: 960px;
-  margin: 64px auto 32px;
-  padding: 16px 20px;
-  font-size: 12px;
-  line-height: 1.6;
-  color: #9a9a9a;
-  text-align: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+.ccc-main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 64px 20px 120px;
 }
 
-.ccc-litepaper-disclaimer strong {
-  color: #666;
-  font-weight: 500;
+/* =========================
+   Hero (Tightened – No CTAs)
+   ========================= */
+
+.ccc-hero {
+  margin-top: 20px;
 }
+
+.ccc-hero h1 {
+  font-size: clamp(36px, 5vw, 44px);
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.ccc-hero-sub {
+  margin: 0;
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 520px;
+}
+
+/* =========================
+   Sections
+   ========================= */
+
+.ccc-section {
+  margin-top: 96px;
+}
+
+.ccc-section h2 {
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+
+.ccc-section p,
+.ccc-section li {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.ccc-section ul {
+  padding-left: 20px;
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+.ccc-footer {
+  max-width: 960px;
+  margin: 0 auto 32px;
+  padding: 20px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* =========================
+   Mobile
+   ========================= */
+
 @media (max-width: 640px) {
-  .ccc-litepaper-disclaimer {
-    font-size: 11px;
-    margin: 40px 16px 24px;
+  .ccc-main {
+    padding-top: 48px;
+  }
+
+  .ccc-nav {
+    gap: 14px;
+  }
+
+  .ccc-hero-sub {
+    font-size: 17px;
   }
 }
