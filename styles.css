@@ -53,13 +53,30 @@ html, body {
   width: auto;
 }
 
+/* =========================
+   Brand Title — EXACT .club Emulation
+   ========================= */
+
 .brand-title {
   font-family: "Inter", system-ui, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: var(--text);
+  font-size: 15px;                 /* slightly larger than nav */
+  font-weight: 600;
+  letter-spacing: 0.22em;          /* wide tracking like .club */
+  text-transform: uppercase;
   white-space: nowrap;
+
+  /* Gradient text */
+  background: linear-gradient(
+    90deg,
+    #ff1493 0%,
+    #ffd700 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  /* Optical polish */
+  line-height: 1;
 }
 
 /* Nav */
