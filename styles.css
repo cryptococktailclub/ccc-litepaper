@@ -276,3 +276,37 @@ html, body {
   transform: translate(-50%, -120%);
   opacity: 0;
 }
+/* =========================
+   Mobile Header Fix (Whitepaper)
+   Matches .com / .club
+   ========================= */
+
+@media (max-width: 640px) {
+  .top-nav {
+    height: 64px;
+    padding-top: env(safe-area-inset-top);
+    align-items: center;
+  }
+}
+@media (max-width: 640px) {
+  .brand-title {
+    font-size: 14px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 640px) {
+  .ccc-logo {
+    width: 20px;
+    height: auto;
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 640px) {
+  .ccc-whitepaper {
+    margin-top: 120px;
+  }
+}
+.top-nav {
+  max-height: 64px;
+}
