@@ -56,6 +56,10 @@ html, body {
   pointer-events: auto;
   transform: translate(-50%, 0);
 }
+/* Ensure header is visible on initial render */
+.top-nav {
+  will-change: transform, opacity;
+}
 
 /* =========================
    Brand (LEFT)
