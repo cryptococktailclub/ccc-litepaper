@@ -210,6 +210,19 @@ html, body {
     padding: 5px 8px; /* slightly tighter than desktop */
   }
 }
+/* -----------------------------
+   Header Nav — Vertical Text Fix (Mobile)
+----------------------------- */
+
+@media (max-width: 640px) {
+
+  .nav-link {
+    line-height: 1.2;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+}
 
 
 /* =========================
