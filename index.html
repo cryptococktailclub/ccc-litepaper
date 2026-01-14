@@ -27,22 +27,23 @@
 </head>
 <script>
   let lastScrollY = window.scrollY;
-  const header = document.querySelector('.top-nav');
+  const header = document.getElementById('topNav');
 
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
+  if (header) {
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
 
-    if (currentScrollY > lastScrollY && currentScrollY > 80) {
-      // Scrolling down
-      header.classList.add('nav-hidden');
-    } else {
-      // Scrolling up
-      header.classList.remove('nav-hidden');
-    }
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        header.classList.remove('header-visible');
+      } else {
+        header.classList.add('header-visible');
+      }
 
-    lastScrollY = currentScrollY;
-  });
+      lastScrollY = currentScrollY;
+    });
+  }
 </script>
+
 
 <body>
 
