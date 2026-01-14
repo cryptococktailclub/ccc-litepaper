@@ -461,3 +461,18 @@ html, body {
   margin-left: auto;          /* push grouped pills right */
   gap: 6px;                   /* even spacing inside group */
 }
+/* =========================
+   Header — Final Right Alignment Lock
+   ========================= */
+
+.top-nav {
+  justify-content: flex-start !important;
+}
+
+.top-nav > .nav-right {
+  margin-left: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
