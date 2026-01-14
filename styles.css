@@ -329,3 +329,7 @@ html, body {
   line-height: 1.5;
   text-wrap: balance;
 }
+.nav-link.active {
+  color: var(--text);
+  border-bottom: 1px solid var(--accent);
+}
