@@ -408,3 +408,33 @@ html, body {
   }
 
 }
+/* =========================
+   Floating Header — Mobile Geometry Fix
+   ========================= */
+
+@media (max-width: 640px) {
+
+  .top-nav {
+    left: 8px;
+    right: 8px;
+    width: auto;
+    max-width: none;
+
+    transform: translateY(-28px); /* remove horizontal translate */
+  }
+
+  .top-nav.header-visible {
+    transform: translateY(0);
+  }
+
+}
+@media (max-width: 640px) {
+
+  .top-nav {
+    min-height: 48px;
+    padding-top: calc(8px + env(safe-area-inset-top));
+    padding-bottom: 8px;
+    align-items: center;
+  }
+
+}
