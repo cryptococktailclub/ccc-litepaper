@@ -223,6 +223,22 @@ html, body {
   }
 
 }
+/* -----------------------------
+   Header Nav — Final Mobile Fit
+----------------------------- */
+
+@media (max-width: 640px) {
+
+  .nav-right {
+    gap: 4px; /* was 6–8px */
+  }
+
+  .nav-link {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+}
 
 
 /* =========================
