@@ -1,5 +1,5 @@
 // CCC Floating Header Scroll Controller
-// Canonical behavior shared across .club and .com
+// Canonical behavior shared across .club, Litepaper, Whitepaper
 
 (function () {
   const header = document.getElementById("topNav");
@@ -8,21 +8,26 @@
   let lastScrollY = window.scrollY;
   let ticking = false;
 
-  const SCROLL_HIDE_THRESHOLD = 80; // px before header can hide
+  const SHOW_THRESHOLD = 40; // px before header is allowed to appear
 
   function onScroll() {
     const currentScrollY = window.scrollY;
 
-    if (currentScrollY > lastScrollY && currentScrollY > SCROLL_HIDE_THRESHOLD) {
-      // Scrolling down
-      header.classList.add("nav-hidden");
+    // Show header when scrolling up or near top
+    if (currentScrollY < SHOW_THRESHOLD || currentScrollY < lastScrollY) {
+      header.classList.add("header-visible");
     } else {
-      // Scrolling up
-      header.classList.remove("nav-hidden");
+      // Hide header when scrolling down
+      header.classList.remove("header-visible");
     }
 
     lastScrollY = currentScrollY;
     ticking = false;
+  }
+
+  // Initial state
+  if (window.scrollY < SHOW_THRESHOLD) {
+    header.classList.add("header-visible");
   }
 
   window.addEventListener("scroll", () => {
