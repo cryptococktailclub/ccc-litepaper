@@ -4,15 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Crypto Cocktail Club — Litepaper</title>
+  <title>Crypto Cocktail Club — Protocol Whitepaper</title>
+  <meta name="description" content="Crypto Cocktail Club Protocol Whitepaper v1.1" />
 
   <!-- SEO / Social -->
-  <meta property="og:title" content="Crypto Cocktail Club — Litepaper" />
+  <meta property="og:title" content="Crypto Cocktail Club — Protocol Whitepaper" />
   <meta property="og:description" content="Ownership infrastructure for cocktail culture." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/assets/icons/ccc-og.png" />
 
-  <!-- Icons -->
+  <!-- Favicons -->
   <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32">
   <link rel="icon" href="/assets/icons/favicon-16.png" sizes="16x16">
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
@@ -22,244 +23,207 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
+  <!-- Canonical CCC Styles -->
   <link rel="stylesheet" href="/styles.css" />
 </head>
-<script>
-  let lastScrollY = window.scrollY;
-  const header = document.getElementById('topNav');
-
-  if (header) {
-    window.addEventListener('scroll', () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && currentScrollY > 80) {
-        header.classList.remove('header-visible');
-      } else {
-        header.classList.add('header-visible');
-      }
-
-      lastScrollY = currentScrollY;
-    });
-  }
-</script>
-
 
 <body>
 
-<!-- FLOATING HEADER (CANONICAL CCC) -->
+<!-- FLOATING HEADER -->
 <header class="top-nav" id="topNav">
   <div class="brand">
-    <img
-      src="/assets/ccc-logo.png"
-      class="ccc-logo"
-      alt="Crypto Cocktail Club"
-    />
+    <img src="/assets/ccc-logo.png" class="ccc-logo" alt="Crypto Cocktail Club" />
     <span class="brand-title">Crypto Cocktail Club</span>
   </div>
 
   <nav class="nav-right">
-    <a
-      href="https://cryptococktail.club"
-      class="nav-link"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a href="https://cryptococktail.club" class="nav-link" target="_blank" rel="noopener noreferrer">
       Bar
     </a>
-
     <a href="/" class="nav-link">
       Litepaper
     </a>
   </nav>
 </header>
 
-
-
-
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-
-    <img
-      src="/assets/ccc-logo.png"
-      alt="Crypto Cocktail Club"
-      class="hero-logo"
-    />
-
-    <h1 class="hero-title">Ownership for Cocktail Culture</h1>
-
-    <p class="hero-subtitle">
-     It’s time the creators had a stake.
-
-
-    </p>
-
+    <img src="/assets/ccc-logo.png" alt="Crypto Cocktail Club" class="hero-logo" />
+    <h1 class="hero-title">Crypto Cocktail Club Protocol Whitepaper</h1>
+    <p class="hero-subtitle">Version 1.1 — January 2026</p>
   </div>
 </section>
 
-<!-- MAIN CONTENT -->
+<!-- CONTENT -->
 <main class="content">
 
-  <!-- PROBLEM -->
   <section class="section">
-    <h2 class="section-title">The Problem</h2>
-    <p>
-      Cocktail culture generates enduring economic and cultural value,
-      yet ownership remains fragmented and informal.
-      Recipes circulate freely, venues capture episodic upside,
-      and the creators responsible for differentiation
-      rarely participate beyond wages and tips.
+    <p style="font-size:13px;color:var(--muted);">
+      <strong>Authored by:</strong> Michael Newton, Founder & CEO
+    </p>
+
+    <p style="margin-top:24px;">
+      <a href="/whitepaper/CCC_Protocol_Whitepaper_v1.1_FULL.pdf"
+         class="nav-link"
+         target="_blank"
+         rel="noopener">
+        Download PDF
+      </a>
     </p>
   </section>
 
-  <!-- MISSION -->
+  <!-- 1 -->
   <section class="section">
-    <h2 class="section-title">Mission</h2>
+    <h2 class="section-title">1. Executive Summary</h2>
     <p>
-      Crypto Cocktail Club exists to establish ownership infrastructure
-      for cocktail culture—aligning incentives without introducing
-      speculative dynamics, operational burden, or consumer friction.
+      Crypto Cocktail Club (CCC) is an event-driven hospitality protocol designed to modernize how cocktail
+      culture, venues, and creators coordinate value without turning bars into crypto businesses. CCC
+      introduces a non-financial on-chain protocol using NFTs for access and redeemable experiences while
+      settling venues and creators off-chain like brand activations.
     </p>
   </section>
 
-  <!-- PROTOCOL FLOW -->
+  <!-- 2 -->
   <section class="section">
-    <h2 class="section-title">Protocol Execution Flow</h2>
-
-    <div class="protocol-flow">
-      <div class="flow-step">Creator Mints Cocktail NFT</div>
-      <div class="flow-arrow">↓</div>
-      <div class="flow-step">Venues Opt In to Execute Recipe</div>
-      <div class="flow-arrow">↓</div>
-      <div class="flow-step">Patron Purchases NFT</div>
-      <div class="flow-arrow">↓</div>
-      <div class="flow-step">Patron Selects Participating Venue</div>
-      <div class="flow-arrow">↓</div>
-      <div class="flow-step">Cocktail Redeemed at Venue</div>
-      <div class="flow-arrow">↓</div>
-      <div class="flow-step">NFT Burned</div>
-      <div class="flow-arrow">↓</div>
-      <div class="flow-step">TIPZ Allocated to Creator, Venue, Protocol</div>
-    </div>
-
+    <h2 class="section-title">2. Problem Statement</h2>
     <p>
-      This execution loop mirrors existing hospitality behavior
-      while introducing verifiable attribution,
-      single-use execution, and automated incentive settlement.
+      Hospitality is culturally rich but economically misaligned. Bartenders create intellectual property but
+      rarely receive royalties. Venues operate on thin margins with limited upside. Brand activations are
+      opaque and difficult to reconcile, while crypto payment models introduce regulatory and UX friction.
     </p>
   </section>
 
-  <!-- COCKTAIL NFT COMPONENT -->
+  <!-- 3 -->
   <section class="section">
-    <h2 class="section-title">Cocktail NFT Component</h2>
+    <h2 class="section-title">3. Design Principles</h2>
     <p>
-      Bartenders mint original cocktail recipes as programmable NFTs
-      through the Crypto Cocktail Club dApp.
-    </p>
-    <p>
-      Venues opt in to specific Cocktail NFTs by signaling
-      execution capability.
-    </p>
-    <p>
-      Patrons purchase the NFT and select a participating venue
-      at the time of redemption. Once redeemed, the NFT is burned.
+      Bars never accept crypto from guests. Creators are paid immediately. Venues are insulated from
+      volatility. No on-chain payments or swaps. Settlement mirrors brand activations. Compliance is
+      enforced by architectural absence.
     </p>
   </section>
 
-  <!-- TIPZ -->
+  <!-- 4 -->
   <section class="section">
-    <h2 class="section-title">TIPZ Incentive Coordination</h2>
+    <h2 class="section-title">4. Protocol Overview</h2>
     <p>
-      TIPZ functions as an incentive coordination layer,
-      not a consumer payment rail.
+      The protocol consists of Membership NFTs (ERC-1155), Cocktail NFTs (ERC-721), TIPZ engagement
+      utility (restricted ERC-20), EscrowVault for deferred funds, and off-chain CCC treasury settlement.
     </p>
   </section>
 
-  <!-- COMPLIANCE -->
+  <!-- 5 -->
   <section class="section">
-    <h2 class="section-title">Compliance & Regulatory Posture</h2>
+    <h2 class="section-title">5. Cocktail NFT Economics</h2>
     <p>
-      Crypto Cocktail Club does not custody user funds,
-      process consumer payments,
-      or require crypto usage at point of service.
+      Primary mint distribution: 90% to venue, 3% to creator paid immediately, 5% to bartender TIP pool
+      escrowed, and 2% protocol fee. Secondary markets apply a 5% resale royalty to the CCC protocol only.
     </p>
   </section>
 
-  <!-- FOUNDER NOTE -->
-  <section class="section founder-note">
-    <h2 class="section-title">Founder Perspective</h2>
+  <!-- 6 -->
+  <section class="section">
+    <h2 class="section-title">6. Escrow & Settlement Model</h2>
     <p>
-      Crypto Cocktail Club was born from a decade behind the bar.
+      ETH is routed deterministically on-chain and held in escrow only when required. All ETH-to-stablecoin
+      or fiat conversion occurs off-chain under CCC treasury operations.
     </p>
-    
+  </section>
+
+  <!-- 7 -->
+  <section class="section">
+    <h2 class="section-title">7. Compliance Posture</h2>
     <p>
-  Now is the time to implement a protocol that realigns cocktail culture to be more equitable for the bar professionals who create the craft, carry the culture, and make the industry work night after night.
-</p>
- </section>
+      No on-chain swaps or oracles. No stablecoin custody. No consumer cash-out mechanisms. Venues never
+      interact with crypto directly.
+    </p>
+  </section>
+
+  <!-- 8 -->
+  <section class="section">
+    <h2 class="section-title">8. Conclusion</h2>
+    <p>
+      CCC provides a pragmatic bridge between hospitality and blockchain by centralizing complexity at the
+      protocol layer while preserving operator simplicity and compliance.
+    </p>
+  </section>
+
+  <!-- 9 -->
+  <section class="section">
+    <h2 class="section-title">9. Phased Deployment Strategy</h2>
+    <p>
+      CCC is deployed through phased execution: Pilot activations, protocol hardening with escrow and
+      audits, and network expansion across venues and markets. Phases are milestones, not guarantees.
+    </p>
+  </section>
+
+  <!-- 10 -->
+  <section class="section">
+    <h2 class="section-title">10. Risks & Design Tradeoffs</h2>
+    <p>
+      Risks include adoption challenges, operational centralization in early phases, NFT market volatility,
+      regulatory interpretation, and execution dependencies. Architectural restraint limits downside
+      exposure.
+    </p>
+  </section>
+
+  <!-- 11 -->
+  <section class="section">
+    <h2 class="section-title">11. Security & Audit Posture</h2>
+    <p>
+      Security is enforced via surface-area minimization. No swaps, oracles, or speculative custody.
+      Third-party audits focus on allocation correctness and access control.
+    </p>
+  </section>
+
+  <!-- 12 -->
+  <section class="section">
+    <h2 class="section-title">12. Governance & Control Model</h2>
+    <p>
+      CCC operates under centralized governance in v1.1. No DAO or token-based voting is employed.
+      Governance may evolve after sustained product-market fit.
+    </p>
+  </section>
+
+  <!-- 13 -->
+  <section class="section">
+    <h2 class="section-title">13. Measuring Protocol Success</h2>
+    <p>
+      Success is measured through real-world execution: creator participation, redemption completion,
+      venue retention, settlement accuracy, TIP pool distribution, and brand activation performance.
+    </p>
+  </section>
 
 </main>
 
 <!-- FOOTER -->
-<div class="footer-icons">
-
-  <!-- X / Twitter -->
-  <a href="https://x.com/cryptococktail"
-     class="footer-icon-link"
-     target="_blank"
-     rel="noopener"
-     aria-label="Crypto Cocktail Club on X">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M18.244 2H21l-6.524 7.455L22.5 22h-6.438l-4.98-6.49L5.89 22H3.13l6.98-7.975L1.5 2h6.602l4.503 5.854L18.244 2z"/>
-    </svg>
-  </a>
-
-  <!-- Discord -->
-  <a href="https://discord.gg/YOUR_INVITE"
-     class="footer-icon-link"
-     target="_blank"
-     rel="noopener"
-     aria-label="Crypto Cocktail Club on Discord">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M20.317 4.369a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.078.037c-.211.375-.444.864-.608 1.249a18.364 18.364 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.249.077.077 0 0 0-.078-.037 19.736 19.736 0 0 0-4.885 1.515.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.029.078.078 0 0 0 .084-.027c.462-.63.873-1.295 1.226-1.994a.076.076 0 0 0-.041-.105 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.127c.126-.094.252-.192.371-.291a.074.074 0 0 1 .077-.01c3.927 1.793 8.18 1.793 12.061 0a.073.073 0 0 1 .078.01c.12.099.246.197.372.291a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.076.076 0 0 0-.04.105c.36.699.77 1.364 1.225 1.994a.076.076 0 0 0 .084.028 19.876 19.876 0 0 0 6.002-3.029.077.077 0 0 0 .032-.056c.5-5.177-.838-9.673-3.548-13.661a.061.061 0 0 0-.031-.027z"/>
-    </svg>
-  </a>
-
-  <!-- GitHub -->
-  <a href="https://github.com/cryptococktailclub"
-     class="footer-icon-link"
-     target="_blank"
-     rel="noopener"
-     aria-label="Crypto Cocktail Club on GitHub">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.11 3.29 9.45 7.86 10.98.57.11.78-.25.78-.55v-2.04c-3.2.7-3.88-1.55-3.88-1.55-.52-1.32-1.28-1.67-1.28-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.68.41.36.78 1.08.78 2.18v3.23c0 .31.2.67.79.55A11.53 11.53 0 0 0 23.5 12.02C23.5 5.74 18.27.5 12 .5z"/>
-    </svg>
-  </a>
-
-  <!-- Medium -->
-  <a href="https://medium.com/@cryptococktailclub"
-     class="footer-icon-link"
-     target="_blank"
-     rel="noopener"
-     aria-label="Crypto Cocktail Club on Medium">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M4.37 6.14a.5.5 0 0 0-.18-.42L2.24 3.4V3h6.05l4.68 10.26L17.08 3h5.76v.4l-1.67 1.6a.48.48 0 0 0-.18.46v11.76a.48.48 0 0 0 .18.46l1.63 1.6v.4h-8.2v-.4l1.69-1.64c.17-.17.17-.22.17-.46V7.67L11.8 18.96h-.63L6.06 7.67v7.98a1.1 1.1 0 0 0 .3.91l2.2 2.66v.4H2.24v-.4l2.2-2.66a1.07 1.07 0 0 0 .28-.91V6.14z"/>
-    </svg>
-  </a>
-
-</div>
-
-
+<footer class="site-footer">
   <div class="ccc-litepaper-disclaimer">
     <p>
       <strong>For informational purposes only.</strong>
-      Nothing on this site constitutes financial, legal, or investment advice,
-      or an offer to buy or sell any security or financial instrument.
+      Nothing herein constitutes legal, financial, or investment advice.
     </p>
   </div>
-
 </footer>
 
-<script src="/script.js"></script>
+<!-- HEADER SCROLL -->
+<script>
+  const header = document.getElementById('topNav');
+  let lastScrollY = window.scrollY;
+
+  if (header) {
+    window.addEventListener('scroll', () => {
+      const current = window.scrollY;
+      if (current > lastScrollY && current > 80) {
+        header.classList.remove('header-visible');
+      } else {
+        header.classList.add('header-visible');
+      }
+      lastScrollY = current;
+    });
+  }
+</script>
+
 </body>
 </html>
