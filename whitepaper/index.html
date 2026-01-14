@@ -217,20 +217,7 @@
   </div>
 
 </footer>
-
-<!-- =========================
-     HEADER SCROLL CONTROLLER
-     ========================= -->
-<script>
-  const header = document.getElementById('topNav');
-  let lastY = window.scrollY;
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (y > lastY && y > 80) header.classList.remove('header-visible');
-    else header.classList.add('header-visible');
-    lastY = y;
-  });
-</script>
+<script src="/script.js"></script>
 
 </body>
 </html>
