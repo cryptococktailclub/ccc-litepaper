@@ -262,22 +262,28 @@
      FLOATING HEADER SCROLL
      ========================= -->
 <script>
-  const header = document.getElementById('topNav');
-  let lastScrollY = window.scrollY;
+  (function () {
+    const header = document.getElementById('topNav');
+    if (!header) return;
 
-  if (header) {
+    let lastScrollY = window.scrollY;
+
+    // ✅ Show header immediately on load
+    header.classList.add('header-visible');
+
     window.addEventListener('scroll', () => {
-      const current = window.scrollY;
+      const currentScrollY = window.scrollY;
 
-      if (current > lastScrollY && current > 80) {
+      // Hide only when scrolling down AND past threshold
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
         header.classList.remove('header-visible');
       } else {
         header.classList.add('header-visible');
       }
 
-      lastScrollY = current;
+      lastScrollY = currentScrollY;
     });
-  }
+  })();
 </script>
 
 </body>
