@@ -311,18 +311,21 @@ html, body {
   max-height: 64px;
 }
 /* =========================
-   Whitepaper Footer Disclaimer — Single Line
+   Whitepaper Footer Disclaimer — Balanced Two-Line Clamp
    ========================= */
 
 .ccc-footer-disclaimer p {
-  white-space: nowrap;
+  max-width: 720px;          /* forces balanced wrapping */
+  margin: 0 auto;
+  text-align: center;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .ccc-footer-disclaimer p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-  margin: 0 auto;
+  line-height: 1.5;
+  text-wrap: balance;
 }
