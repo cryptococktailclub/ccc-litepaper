@@ -366,3 +366,23 @@ html, body {
   color: var(--text);
   border-bottom: 1px solid var(--accent);
 }
+/* =========================
+   Litepaper Header — Final Mobile Fit
+   Prevent Nav Clipping
+   ========================= */
+
+@media (max-width: 640px) {
+
+  .top-nav .nav-right {
+    gap: 4px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .top-nav .nav-link {
+    white-space: nowrap;
+    line-height: 1.25;
+    padding: 6px 6px;
+  }
+
+}
