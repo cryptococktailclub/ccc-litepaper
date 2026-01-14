@@ -148,6 +148,13 @@ html, body {
   max-width: none;          /* remove forced wrapping */
   white-space: nowrap;     /* keep on one line */
 }
+@media (max-width: 640px) {
+  .hero-subtitle {
+    white-space: normal;   /* allow wrap on small screens only */
+    max-width: 92%;
+    font-size: 16px;
+  }
+}
 
 
 /* =====================================================
