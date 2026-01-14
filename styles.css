@@ -386,3 +386,25 @@ html, body {
   }
 
 }
+@media (max-width: 640px) {
+
+  .top-nav {
+    min-height: 44px;
+    padding-top: calc(8px + env(safe-area-inset-top));
+    padding-bottom: 8px;
+  }
+
+  .top-nav .nav-right {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 3px;
+  }
+
+  .top-nav .nav-link {
+    white-space: nowrap;
+    line-height: 1.25;
+    padding: 6px 5px;
+    font-size: 0.72rem;
+  }
+
+}
