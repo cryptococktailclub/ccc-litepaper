@@ -449,3 +449,15 @@ html, body {
   justify-content: flex-end;  /* align pills as a unit */
   gap: 6px;                   /* even spacing between pills */
 }
+/* =========================
+   Header Layout — Pill Group Fix
+   ========================= */
+
+.top-nav {
+  justify-content: flex-start; /* stop distributing space */
+}
+
+.top-nav .nav-right {
+  margin-left: auto;          /* push grouped pills right */
+  gap: 6px;                   /* even spacing inside group */
+}
