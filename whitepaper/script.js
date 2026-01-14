@@ -1,39 +1,35 @@
+// =====================================================
 // CCC Floating Header Scroll Controller
-// Canonical behavior shared across .club, Litepaper, Whitepaper
+// Canonical behavior for Litepaper & Whitepaper
+// =====================================================
 
 (function () {
   const header = document.getElementById("topNav");
   if (!header) return;
 
   let lastScrollY = window.scrollY;
-  let ticking = false;
+  const HIDE_THRESHOLD = 80; // px
 
-  const SHOW_THRESHOLD = 40; // px before header is allowed to appear
+  // Ensure header is visible on initial load
+  window.requestAnimationFrame(() => {
+    header.classList.add("header-visible");
+  });
 
   function onScroll() {
     const currentScrollY = window.scrollY;
 
-    // Show header when scrolling up or near top
-    if (currentScrollY < SHOW_THRESHOLD || currentScrollY < lastScrollY) {
-      header.classList.add("header-visible");
-    } else {
-      // Hide header when scrolling down
+    // Scrolling down past threshold → hide
+    if (currentScrollY > lastScrollY && currentScrollY > HIDE_THRESHOLD) {
       header.classList.remove("header-visible");
+    } 
+    // Scrolling up → show
+    else {
+      header.classList.add("header-visible");
     }
 
     lastScrollY = currentScrollY;
-    ticking = false;
   }
 
-  // Initial state
-  if (window.scrollY < SHOW_THRESHOLD) {
-    header.classList.add("header-visible");
-  }
-
-  window.addEventListener("scroll", () => {
-    if (!ticking) {
-      window.requestAnimationFrame(onScroll);
-      ticking = true;
-    }
-  });
+  // Passive scroll for performance
+  window.addEventListener("scroll", onScroll, { passive: true });
 })();
