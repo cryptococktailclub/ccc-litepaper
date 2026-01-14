@@ -194,6 +194,22 @@ html, body {
     padding: 5px 10px;
   }
 }
+/* -----------------------------
+   Header Nav — Force Single Line on Mobile
+----------------------------- */
+
+@media (max-width: 640px) {
+
+  .nav-right {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .nav-link {
+    white-space: nowrap;
+    padding: 5px 8px; /* slightly tighter than desktop */
+  }
+}
 
 
 /* =========================
