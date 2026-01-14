@@ -21,85 +21,6 @@ html, body {
 }
 
 /* =========================
-   Floating Header (Canonical)
-   ========================= */
-
-.top-nav {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(1180px, 94%);
-  padding: 14px 20px;
-  border-radius: 999px;
-  background: rgba(5,1,15,0.92);
-  border: 1px solid rgba(255,255,255,0.08);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-  transition: transform 0.35s ease, opacity 0.35s ease;
-}
-
-/* Brand cluster */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.ccc-logo {
-  height: 28px;
-  width: auto;
-}
-
-/* =========================
-   Brand Title — EXACT .club Emulation
-   ========================= */
-
-.brand-title {
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 15px;                 /* slightly larger than nav */
-  font-weight: 600;
-  letter-spacing: 0.22em;          /* wide tracking like .club */
-  text-transform: uppercase;
-  white-space: nowrap;
-
-  /* Gradient text */
-  background: linear-gradient(
-    90deg,
-    #ff1493 0%,
-    #ffd700 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-
-  /* Optical polish */
-  line-height: 1;
-}
-
-/* Nav */
-.nav-right {
-  display: flex;
-  gap: 22px;
-}
-
-.nav-link {
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: normal;
-  text-transform: none;
-  color: var(--muted);
-}
-
-/* Scroll hide */
-.top-nav.nav-hidden {
-  transform: translate(-50%, -120%);
-  opacity: 0;
-}
-
-/* =========================
    Hero — CCC (.club emulation)
    ========================= */
 
@@ -149,6 +70,128 @@ html, body {
 
   .hero-title {
     font-size: 36px;
+  }
+}
+/* -----------------------------
+   FLOATING HEADER (CANONICAL)
+   ----------------------------- */
+
+.top-nav {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, -28px);
+  width: 100%;
+  max-width: 1120px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(5, 1, 15, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 50;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.top-nav.header-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+/* Brand cluster */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ccc-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0 0 12px rgba(255, 20, 147, 0.85);
+}
+
+.brand-title {
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Nav */
+.nav-right {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-link {
+  font-size: 0.78rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+/* -----------------------------
+   FLOATING HEADER — MOBILE
+   Matches .club exactly
+----------------------------- */
+
+@media (max-width: 640px) {
+
+  .top-nav {
+    top: env(safe-area-inset-top);
+    padding: 8px 12px;
+    max-width: calc(100% - 16px);
+    border-radius: 999px;
+  }
+
+  .brand {
+    gap: 6px;
+  }
+
+  .ccc-logo {
+    width: 22px;
+    height: 22px;
+    box-shadow: 0 0 8px rgba(255, 20, 147, 0.75);
+  }
+
+  .brand-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .nav-right {
+    gap: 6px;
+  }
+
+  .nav-link {
+    font-size: 0.72rem;
+    padding: 5px 10px;
   }
 }
 
@@ -255,61 +298,6 @@ html, body {
   fill: var(--text);
 }
 
-/* =========================
-   Mobile
-   ========================= */
-
-@media (max-width: 640px) {
-  .hero {
-    padding-top: 40px;
-  }
-
-  .section {
-    margin-top: 72px;
-  }
-}
-.top-nav {
-  transition: transform 0.35s ease, opacity 0.35s ease;
-}
-
-.top-nav.nav-hidden {
-  transform: translate(-50%, -120%);
-  opacity: 0;
-}
-/* =========================
-   Mobile Header Fix (Whitepaper)
-   Matches .com / .club
-   ========================= */
-
-@media (max-width: 640px) {
-  .top-nav {
-    height: 64px;
-    padding-top: env(safe-area-inset-top);
-    align-items: center;
-  }
-}
-@media (max-width: 640px) {
-  .brand-title {
-    font-size: 14px;
-    line-height: 1;
-    white-space: nowrap;
-  }
-}
-@media (max-width: 640px) {
-  .ccc-logo {
-    width: 20px;
-    height: auto;
-    flex-shrink: 0;
-  }
-}
-@media (max-width: 640px) {
-  .ccc-whitepaper {
-    margin-top: 120px;
-  }
-}
-.top-nav {
-  max-height: 64px;
-}
 /* =========================
    Whitepaper Footer Disclaimer — Balanced Two-Line Clamp
    ========================= */
