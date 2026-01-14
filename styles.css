@@ -438,3 +438,14 @@ html, body {
   }
 
 }
+/* =========================
+   Header Nav — Right-Aligned Pill Group
+   ========================= */
+
+.top-nav .nav-right {
+  margin-left: auto;          /* force group to far right */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;  /* align pills as a unit */
+  gap: 6px;                   /* even spacing between pills */
+}
