@@ -246,16 +246,31 @@ tbody tr:hover {
 .ccc-footer-disclaimer p {
   font-size: 12px;
   color: var(--muted);
-  max-width: 760px;
   margin: 16px auto 0;
-  line-height: 1.5;
+  line-height: 1.4;
+
+  /* keep single line */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* allow wide line */
+  max-width: none;
 }
+@media (max-width: 520px) {
+  .ccc-footer-disclaimer p {
+    white-space: normal;
+  }
+}
+
 .footer-icons {
   display: flex;
   justify-content: center;
-  gap: 18px;
+  align-items: center;
+  gap: 22px;
   margin-bottom: 20px;
 }
+
 
 .footer-icon-link {
   display: inline-flex;
@@ -274,6 +289,12 @@ tbody tr:hover {
   width: 20px;
   height: 20px;
   display: block;
+}
+.footer-icon-link svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: currentColor;
 }
 
 /* =====================================================
@@ -410,4 +431,52 @@ body[data-doc="investors"] p {
 /* Section spacing: between litepaper and whitepaper */
 body[data-doc="investors"] .section {
   margin-top: 64px;
+}
+/* ============================
+   FOOTER FIXES — FINAL
+============================ */
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 20px;
+}
+
+.footer-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-icon-link:hover {
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+.footer-icon-link svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: currentColor;
+}
+
+.ccc-footer-disclaimer p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 16px auto 0;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: none;
+}
+
+@media (max-width: 520px) {
+  .ccc-footer-disclaimer p {
+    white-space: normal;
+  }
 }
