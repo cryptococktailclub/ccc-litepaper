@@ -396,3 +396,55 @@ html, body {
     padding: 0 12px;
   }
 }
+/* ========================================= */
+/* LITEPAPER VISUAL DISTINCTION */
+/* ========================================= */
+
+body[data-doc="litepaper"] .hero-title {
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  opacity: 0.95;
+}
+
+body[data-doc="litepaper"] .hero-subtitle {
+  font-size: 1.05rem;
+  opacity: 0.75;
+}
+
+/* Section rhythm: lighter, more breathable */
+body[data-doc="litepaper"] .section {
+  padding: 3.5rem 0;
+}
+
+body[data-doc="litepaper"] .section-title {
+  font-size: 1.35rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+/* Reduce technical density */
+body[data-doc="litepaper"] p {
+  max-width: 680px;
+  font-size: 0.95rem;
+}
+
+/* Protocol flow feels illustrative, not mechanical */
+body[data-doc="litepaper"] .protocol-flow {
+  opacity: 0.85;
+}
+
+body[data-doc="litepaper"] .flow-step {
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+/* Founder note: softer emphasis */
+body[data-doc="litepaper"] .founder-note {
+  opacity: 0.85;
+}
+
+/* Footer disclaimer lighter */
+body[data-doc="litepaper"] .ccc-footer-disclaimer {
+  opacity: 0.6;
+}
