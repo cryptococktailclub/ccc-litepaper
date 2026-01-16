@@ -474,6 +474,21 @@ body[data-doc="investors"] .section {
   text-overflow: ellipsis;
   max-width: none;
 }
+/* ============================
+   FOOTER DISCLAIMER — FIX
+============================ */
+
+.ccc-footer-disclaimer p {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+
+  line-height: 1.5;
+}
 
 @media (max-width: 520px) {
   .ccc-footer-disclaimer p {
