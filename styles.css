@@ -386,6 +386,35 @@ body[data-doc="investors"] p {
 body[data-doc="investors"] .section {
   margin-top: 64px;
 }
+/* Footer social icons layout */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 24px;
+}
+
+.footer-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  text-decoration: none;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.footer-icon-link:hover {
+  color: var(--text);
+}
+
+.footer-icon-link svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
 .footer-icon-link svg {
   width: 20px;
   height: 20px;
