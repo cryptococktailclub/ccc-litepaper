@@ -448,3 +448,21 @@ body[data-doc="litepaper"] .founder-note {
 body[data-doc="litepaper"] .ccc-footer-disclaimer {
   opacity: 0.6;
 }
+.footer-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--text);
+}
+
+.investor-link {
+  opacity: 0.85;
+}
+
+.investor-link:hover {
+  opacity: 1;
+}
