@@ -563,3 +563,23 @@ body[data-doc="investors"] .section {
   background: rgba(255,255,255,0.07);
   border-color: rgba(255,255,255,0.18);
 }
+/* =====================================
+   FOOTER DISCLAIMER — HARD RESET
+===================================== */
+
+.ccc-footer-disclaimer p {
+  font-size: 12px !important;
+  max-width: none !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  line-height: 1.4;
+}
+
+/* Mobile: allow wrapping */
+@media (max-width: 768px) {
+  .ccc-footer-disclaimer p {
+    white-space: normal !important;
+    max-width: 760px !important;
+  }
+}
