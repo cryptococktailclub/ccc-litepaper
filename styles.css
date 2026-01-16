@@ -355,6 +355,22 @@ body[data-doc="litepaper"] p {
   max-width: 640px;
   font-size: 0.95rem;
 }
+/* =====================================
+   LITEPAPER — FOOTER DISCLAIMER FIX
+===================================== */
+
+body[data-doc="litepaper"] .ccc-footer-disclaimer p {
+  max-width: none;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: unset;
+}
+@media (max-width: 768px) {
+  body[data-doc="litepaper"] .ccc-footer-disclaimer p {
+    white-space: normal;
+    max-width: 760px;
+  }
+}
 
 /* =====================================================
    WHITEPAPER OVERRIDES
