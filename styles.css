@@ -420,3 +420,28 @@ body[data-doc="investors"] .section {
   height: 20px;
   display: block;
 }
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-icon-link:hover {
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+.footer-icon-link svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
