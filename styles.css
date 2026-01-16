@@ -386,3 +386,8 @@ body[data-doc="investors"] p {
 body[data-doc="investors"] .section {
   margin-top: 64px;
 }
+.footer-icon-link svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
