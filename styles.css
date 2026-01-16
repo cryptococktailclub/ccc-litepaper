@@ -200,6 +200,82 @@ html, body {
 .founder-note {
   margin-top: 120px;
 }
+/* ============================= */
+/* TIPZ TOKENOMICS BASE STYLES */
+/* ============================= */
+
+#tipz-tokenomics {
+  margin-top: 4rem;
+}
+
+#tipz-tokenomics h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.04em;
+}
+
+#tipz-tokenomics h3 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.03em;
+}
+
+#tipz-tokenomics h4 {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  opacity: 0.9;
+}
+
+#tipz-tokenomics p,
+#tipz-tokenomics li {
+  line-height: 1.65;
+  max-width: 760px;
+}
+
+#tipz-tokenomics ul {
+  padding-left: 1.2rem;
+}
+/* ============================= */
+/* TABLE STYLING */
+/* ============================= */
+
+#tipz-tokenomics table {
+  width: 100%;
+  max-width: 900px;
+  margin: 1.5rem 0 2.5rem;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#tipz-tokenomics thead {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+#tipz-tokenomics th,
+#tipz-tokenomics td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+#tipz-tokenomics th {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+#tipz-tokenomics tbody tr {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#tipz-tokenomics tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
 
 /* =====================================================
    FOOTER
