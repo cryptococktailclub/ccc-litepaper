@@ -480,3 +480,37 @@ body[data-doc="investors"] .section {
     white-space: normal;
   }
 }
+/* ============================
+   FOOTER — INVESTORS PILL
+============================ */
+
+.footer-investors {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-investor-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: var(--muted);
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.footer-investor-pill:hover {
+  color: var(--text);
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.18);
+}
