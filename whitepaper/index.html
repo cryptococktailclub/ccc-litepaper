@@ -186,185 +186,44 @@
     venue retention, settlement accuracy, TIP pool distribution, and brand activation performance.
   </p>
 </section>
-<section id="tipz-tokenomics">
-  <h2>TIPZ Tokenomics</h2>
+<section class="paper-section">
+  <h2>Incentive Accounting (TIPZ)</h2>
 
   <p>
-    TIPZ is a utility settlement token designed to route value across the Crypto Cocktail Club (CCC)
-    ecosystem at the moment of hospitality activity. It functions as a programmable gratuity and
-    settlement unit, enabling transparent distribution of value to venues, bartenders, creators,
-    and the CCC protocol—without requiring venues or staff to assume cryptocurrency custody or
-    market risk.
+    TIPZ is a restricted internal accounting unit used exclusively to coordinate
+    bartender incentives within the Crypto Cocktail Club protocol.
+    It is not a payment token, governance token, or speculative asset.
   </p>
 
   <p>
-    TIPZ is not a speculative asset. It is usage-driven, deflationary by design, and tightly coupled
-    to real-world consumption events.
+    TIPZ exists to ensure that service execution—preparing and redeeming cocktails—
+    is compensated deterministically without requiring venues or staff to custody,
+    trade, or interact with cryptocurrency.
   </p>
 
-  <h3>Design Principles</h3>
+  <h3>Operational Role</h3>
+  <p>
+    When a Cocktail NFT is minted, a fixed percentage of the transaction is allocated
+    to a bartender incentive pool. These allocations are recorded on-chain and held
+    in escrow until redemption occurs.
+  </p>
+
+  <p>
+    Upon redemption, TIPZ balances are reconciled off-chain and settled via the CCC
+    treasury in fiat or stablecoin equivalents, depending on jurisdiction.
+  </p>
+
+  <h3>Design Constraints</h3>
   <ul>
-    <li><strong>Usage-only emission:</strong> TIPZ enters circulation exclusively through verified hospitality activity.</li>
-    <li><strong>No venue crypto exposure:</strong> Venues never custody TIPZ.</li>
-    <li><strong>Immediate labor settlement:</strong> Bartenders are never required to hold TIPZ.</li>
-    <li><strong>Fixed supply:</strong> No inflation or discretionary minting.</li>
-    <li><strong>On-chain enforcement:</strong> Emissions, splits, conversions, and burns are auditable.</li>
-  </ul>
-
-  <h3>Token Supply</h3>
-  <p>
-    <strong>Total Supply:</strong> 1,000,000,000 TIPZ (fixed)
-  </p>
-  <p>
-    TIPZ has no rebasing, no inflation, and no post-genesis minting beyond predefined emission logic.
-  </p>
-
-  <h3>Genesis Allocation</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Allocation</th>
-        <th>Percentage</th>
-        <th>TIPZ</th>
-        <th>Vesting / Emission</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Ecosystem Rewards (Tips Pool)</td>
-        <td>45%</td>
-        <td>450,000,000</td>
-        <td>Emitted via usage</td>
-      </tr>
-      <tr>
-        <td>Venue Liquidity &amp; Settlement</td>
-        <td>20%</td>
-        <td>200,000,000</td>
-        <td>Programmatic</td>
-      </tr>
-      <tr>
-        <td>CCC Treasury</td>
-        <td>15%</td>
-        <td>150,000,000</td>
-        <td>24-month linear vest</td>
-      </tr>
-      <tr>
-        <td>Founders &amp; Core Team</td>
-        <td>10%</td>
-        <td>100,000,000</td>
-        <td>12-month cliff + 36-month vest</td>
-      </tr>
-      <tr>
-        <td>Advisors &amp; Strategic Partners</td>
-        <td>5%</td>
-        <td>50,000,000</td>
-        <td>12-month linear vest</td>
-      </tr>
-      <tr>
-        <td>Public Liquidity</td>
-        <td>5%</td>
-        <td>50,000,000</td>
-        <td>Unlocked</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>Emission Mechanics</h3>
-  <p>
-    TIPZ is emitted only when a verified hospitality action occurs, including:
-  </p>
-  <ul>
-    <li>Cocktail NFT redemption</li>
-    <li>Membership utility redemption</li>
-    <li>Confirmed event attendance</li>
-    <li>Brand-sponsored activations</li>
-  </ul>
-  <p>
-    Each emission requires a one-time activity proof, preventing replay or double issuance.
-    No staking, idle farming, or time-based emissions exist.
-  </p>
-
-  <h3>Value Routing &amp; Splits</h3>
-  <p>
-    Upon emission, TIPZ is routed to a settlement contract and split according to protocol-enforced
-    parameters.
-  </p>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Recipient</th>
-        <th>Allocation</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Venue (settled in stablecoin or fiat)</td>
-        <td>85–90%</td>
-      </tr>
-      <tr>
-        <td>Bartender / Creator Tip Pool</td>
-        <td>5–10%</td>
-      </tr>
-      <tr>
-        <td>CCC Protocol Fee</td>
-        <td>3–5%</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p>
-    Percentages may vary by activation but are enforced on-chain and disclosed in advance.
-  </p>
-
-  <h3>Settlement Models</h3>
-
-  <h4>Model A — On-Chain Stablecoin Settlement (Default)</h4>
-  <ul>
-    <li>TIPZ is converted into stablecoin at time of redemption</li>
-    <li>Bartenders receive stablecoin, not TIPZ</li>
-    <li>No crypto custody required for staff</li>
-    <li>Claim-based or automatic payout supported</li>
-  </ul>
-
-  <h4>Model B — Off-Chain Fiat Settlement (Optional)</h4>
-  <ul>
-    <li>TIPZ is converted into stablecoin</li>
-    <li>Amounts are logged on-chain for auditability</li>
-    <li>CCC settles payments to bartenders in fiat via payroll or ACH</li>
-  </ul>
-
-  <h3>Burn Mechanics</h3>
-  <p>
-    TIPZ is permanently removed from circulation when:
-  </p>
-  <ul>
-    <li>Converted to stablecoin for settlement</li>
-    <li>Used for protocol fees</li>
-    <li>Redeemed for non-recyclable perks</li>
+    <li>TIPZ is not consumer-facing</li>
+    <li>TIPZ is not used for payments</li>
+    <li>TIPZ has no open market trading</li>
+    <li>TIPZ confers no governance or ownership rights</li>
   </ul>
 
   <p>
-    As CCC activity increases, circulating TIPZ supply decreases, introducing usage-driven
-    deflation.
-  </p>
-
-  <h3>Relationship to Membership NFTs</h3>
-  <p>
-    Membership NFTs gate access and participation. TIPZ monetizes activity within that access.
-    Higher membership tiers unlock enhanced earning multipliers and expanded utility.
-  </p>
-
-  <h3>What TIPZ Is Not</h3>
-  <ul>
-    <li>Not equity</li>
-    <li>Not profit-sharing</li>
-    <li>Not a dividend or yield token</li>
-    <li>Not required for access to CCC</li>
-  </ul>
-
-  <p>
-    TIPZ is a settlement and incentive mechanism, not a financial instrument.
+    These constraints are intentional and exist to prevent financialization,
+    speculation, and regulatory exposure within hospitality operations.
   </p>
 </section>
 
