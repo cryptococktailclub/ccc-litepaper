@@ -464,37 +464,28 @@ body[data-doc="investors"] .section {
   fill: currentColor;
 }
 
+/* ============================
+   FOOTER DISCLAIMER — FINAL
+============================ */
+
 .ccc-footer-disclaimer p {
   font-size: 12px;
   color: var(--muted);
   margin: 16px auto 0;
   line-height: 1.4;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: none;
-}
-/* ============================
-   FOOTER DISCLAIMER — FIX
-============================ */
 
-.ccc-footer-disclaimer p {
-  white-space: normal !important;
-  overflow: visible !important;
-  text-overflow: unset !important;
-
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-
-  line-height: 1.5;
+  max-width: none;          /* allow full footer width */
+  white-space: nowrap;     /* keep on one line */
 }
 
-@media (max-width: 520px) {
+/* Allow wrapping on mobile only */
+@media (max-width: 768px) {
   .ccc-footer-disclaimer p {
     white-space: normal;
+    max-width: 760px;
   }
 }
+
 /* ============================
    FOOTER — INVESTORS PILL
 ============================ */
