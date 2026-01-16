@@ -466,3 +466,18 @@ body[data-doc="litepaper"] .ccc-footer-disclaimer {
 .investor-link:hover {
   opacity: 1;
 }
+.paper-section h3 {
+  margin-top: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.paper-section ul {
+  margin-left: 20px;
+  color: var(--muted);
+}
+
+.paper-section ul li {
+  margin-bottom: 8px;
+}
