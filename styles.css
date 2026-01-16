@@ -485,6 +485,33 @@ body[data-doc="investors"] .section {
     max-width: 760px;
   }
 }
+/* ============================
+   FOOTER DISCLAIMER — LOCKED
+============================ */
+
+.ccc-footer-disclaimer {
+  width: 100%;
+  text-align: center;
+}
+
+.ccc-footer-disclaimer p {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+  margin: 16px auto 0;
+
+  white-space: nowrap;
+  max-width: none;
+}
+
+/* Mobile: allow wrapping */
+@media (max-width: 768px) {
+  .ccc-footer-disclaimer p {
+    white-space: normal;
+    max-width: 760px;
+  }
+}
 
 /* ============================
    FOOTER — INVESTORS PILL
