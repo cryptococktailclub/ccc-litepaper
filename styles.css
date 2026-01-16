@@ -175,6 +175,61 @@ html, body {
   margin-bottom: 8px;
   line-height: 1.6;
 }
+/* =====================================
+   PROTOCOL VISUAL (LITEPAPER)
+===================================== */
+
+.protocol-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 20px 24px;
+  margin: 28px auto 8px;
+  max-width: 760px;
+
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+}
+
+.protocol-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 90px;
+}
+
+.protocol-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.protocol-label {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+}
+
+.protocol-arrow {
+  color: rgba(255,255,255,0.35);
+  font-size: 14px;
+}
+
+/* Mobile stack */
+@media (max-width: 640px) {
+  .protocol-visual {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .protocol-arrow {
+    transform: rotate(90deg);
+  }
+}
 
 /* =====================================================
    TABLES (SHARED)
