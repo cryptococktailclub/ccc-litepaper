@@ -325,36 +325,16 @@ tbody tr:hover {
   }
 }
 
-/* =====================================================
-   LITEPAPER OVERRIDES
-===================================================== */
+/* =====================================
+   LITEPAPER HERO TITLE — NORMALIZED
+===================================== */
 
 body[data-doc="litepaper"] .hero-title {
   font-weight: 500;
-  letter-spacing: 0.06em;
+  letter-spacing: -0.01em;
   opacity: 0.95;
 }
 
-body[data-doc="litepaper"] .hero-subtitle {
-  font-size: 16.5px;
-  opacity: 0.75;
-}
-
-body[data-doc="litepaper"] .section {
-  margin-top: 56px;
-}
-
-body[data-doc="litepaper"] .section-title {
-  font-size: 1.25rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0.85;
-}
-
-body[data-doc="litepaper"] p {
-  max-width: 640px;
-  font-size: 0.95rem;
-}
 /* =====================================
    LITEPAPER — FOOTER DISCLAIMER FIX
 ===================================== */
