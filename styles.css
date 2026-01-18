@@ -364,6 +364,33 @@ tbody tr:hover {
   font-size: 0.9rem;
   color: var(--muted);
 }
+/* =========================
+   CCC HALO GLOW — MEMBERSHIP PYRAMID
+   ========================= */
+
+/* Base — Neon Pink Halo */
+.pyramid-base {
+  box-shadow:
+    0 0 0 1px rgba(255,20,147,0.35),
+    0 0 18px rgba(255,20,147,0.18),
+    0 0 36px rgba(255,20,147,0.08);
+}
+
+/* Gold — Polished Gold Halo */
+.pyramid-gold {
+  box-shadow:
+    0 0 0 1px rgba(255,183,0,0.35),
+    0 0 18px rgba(255,183,0,0.18),
+    0 0 36px rgba(255,183,0,0.08);
+}
+
+/* Platinum — Chrome Silver Halo */
+.pyramid-platinum {
+  box-shadow:
+    0 0 0 1px rgba(232,232,232,0.45),
+    0 0 18px rgba(192,192,192,0.22),
+    0 0 36px rgba(192,192,192,0.10);
+}
 
 /* =====================================================
    FOOTER (SHARED)
