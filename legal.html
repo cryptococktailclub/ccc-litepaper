@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto Cocktail Club — Legal & Protocol Framework</title>
+
+  <!-- Favicons (shared with Litepaper) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/litepaper/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/litepaper/assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/litepaper/assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/litepaper/assets/icons/favicon.svg">
+  <link rel="manifest" href="/litepaper/assets/icons/site.webmanifest">
+
+  <style>
+    :root {
+      --bg: #05010f;
+      --panel: rgba(255,255,255,0.03);
+      --text: #f8f5ff;
+      --muted: #a59ac7;
+      --accent: #ff1493;
+      --border: rgba(255,255,255,0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.65;
+    }
+
+    /* FLOATING HEADER */
+    .top-nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1180px, 94%);
+      padding: 14px 20px;
+      border-radius: 999px;
+      background: rgba(5,1,15,0.92);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    .top-nav img {
+      height: 28px;
+    }
+
+    .top-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    .top-nav a:hover {
+      opacity: 1;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 140px 20px 64px; /* extra top padding for floating nav */
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      background: radial-gradient(
+        60% 80% at 50% 0%,
+        rgba(255,20,147,0.12),
+        transparent 70%
+      );
+    }
+
+    .hero img {
+      height: 72px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      margin: 0 0 12px;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 72px 20px 96px;
+    }
+
+    h2 {
+      margin-top: 64px;
+      font-size: 1.6rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      margin-top: 32px;
+      font-size: 1.2rem;
+    }
+
+    p {
+      margin: 16px 0;
+    }
+
+    ul {
+      margin: 16px 0 16px 20px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    footer {
+      margin-top: 96px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- FLOATING HEADER -->
+  <nav class="top-nav">
+    <img src="/assets/ccc-logo.svg" alt="Crypto Cocktail Club Logo">
+    <a href="/litepaper/">Litepaper</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <img src="/assets/ccc-logo.svg" alt="Crypto Cocktail Club Logo" />
+    <h1>Legal & Protocol Framework</h1>
+    <p>Investor & Partner Reference Document</p>
+  </header>
+
+  <!-- CONTENT -->
+  <main>
+
+    <h2>1. Executive Summary</h2>
+    <p>
+      Crypto Cocktail Club (“CCC”) operates a cultural IP registry and activation protocol for cocktail recipes.
+      CCC NFTs are not collectibles and are not scarcity-based assets. Each recipe is minted once as a canonical
+      registry record and is designed for broad, repeated real-world use across participating venues and activations.
+    </p>
+    <p>
+      Value accrues through usage-based activation, transferable economic rights, and protocol fees—not speculation.
+    </p>
+
+    <h2>2. Canonical NFT Model</h2>
+    <p>
+      Each cocktail recipe is minted once as a non-fungible token representing the canonical registry entry for that recipe.
+      There are no editions, no supply constraints, and no artificial scarcity.
+    </p>
+
+    <h2>3. Separation of Rights</h2>
+    <ul>
+      <li><strong>Authorship:</strong> Permanent creator attribution (non-transferable)</li>
+      <li><strong>Usage:</strong> Open activation by participating venues</li>
+      <li><strong>Economic Rights:</strong> Transferable monetization rights</li>
+    </ul>
+
+    <h2>4. Usage & Activation Model</h2>
+    <p>
+      Venues do not purchase or own recipes. They activate registered recipes through the CCC protocol.
+      Each activation is logged and may trigger settlement to the current economic rights holder.
+    </p>
+
+    <h2>5. Economic Rights Ownership Marketplace</h2>
+    <p>
+      Creators may optionally sell the economic rights associated with a recipe via the CCC marketplace.
+      A sale transfers future activation revenue and monetization control but does not transfer authorship or attribution.
+    </p>
+
+    <h3>Marketplace Fee</h3>
+    <p>
+      Crypto Cocktail Club takes a flat <strong>10% fee</strong> on all rights ownership sales and resales.
+    </p>
+
+    <h2>6. Mint Fee</h2>
+    <p>
+      Each recipe mint carries a one-time publishing fee that covers secure publishing, permanent archival,
+      and registry indexing. CCC sponsors all underlying blockchain costs.
+    </p>
+
+    <h2>7. Creator Originality Attestation</h2>
+    <p>
+      By minting a recipe, creators attest that the recipe is their original creation or that they hold the legal right
+      to publish it. CCC relies on attestations and enforces them through its dispute framework.
+    </p>
+
+    <h2>8. Dispute & Takedown Framework</h2>
+    <p>
+      CCC recognizes disputes related to authorship, fraud, legal claims, or technical errors.
+      CCC does not adjudicate creative merit or revenue performance.
+    </p>
+
+    <h2>9. Venue Liability Disclaimer</h2>
+    <p>
+      Venues activating recipes are responsible for service execution, safety, and regulatory compliance.
+      CCC does not sell alcohol or control venue operations.
+    </p>
+
+    <h2>10. Buyer Risk Disclosure</h2>
+    <p>
+      Purchasing economic rights involves commercial risk. CCC does not guarantee usage frequency,
+      revenue outcomes, or market demand. Rights ownership is not equity or a security.
+    </p>
+
+    <h2>11. Brand Collaboration Carve-Outs</h2>
+    <p>
+      Recipes developed under brand collaborations may include modified monetization or activation rules,
+      which must be disclosed at registration. Authorship attribution remains permanent.
+    </p>
+
+    <h2>12. Regulatory Posture</h2>
+    <p>
+      CCC operates as a cultural IP registry, rights marketplace, and settlement coordinator.
+      CCC does not provide investment products or custody alcohol-related revenue.
+    </p>
+
+    <h2>13. Governing Law</h2>
+    <p>
+      These terms are governed by the laws of the State of New York, with exclusive jurisdiction
+      in New York County courts.
+    </p>
+
+    <h2>14. Canonical Summary</h2>
+    <p>
+      Crypto Cocktail Club is a cultural IP registry and activation protocol where cocktail recipes are minted once,
+      used broadly, monetized through real-world activation, and optionally traded as economic rights—with CCC taking
+      a flat 10% marketplace fee.
+    </p>
+
+    <footer>
+      © 2026 Crypto Cocktail Club. All rights reserved.
+    </footer>
+
+  </main>
+</body>
+</html>
