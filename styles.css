@@ -687,3 +687,47 @@ body[data-doc="investors"] .section {
   text-decoration: underline;
   opacity: 1;
 }
+.membership-pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+/* Base tier style */
+.pyramid-tier {
+  width: 100%;
+  max-width: 520px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  text-align: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Visual narrowing */
+.pyramid-top {
+  max-width: 260px;
+  border-color: rgba(200,200,200,0.5);
+}
+
+.pyramid-middle {
+  max-width: 380px;
+}
+
+.pyramid-bottom {
+  max-width: 520px;
+}
+
+.pyramid-tier h3 {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.pyramid-tier p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
+}
