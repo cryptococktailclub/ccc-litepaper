@@ -39,7 +39,8 @@
 <!-- =========================
      FLOATING HEADER (UNIFIED)
      ========================= -->
-<header class="top-nav" id="topNav">
+<header class="top-nav header-visible" id="topNav">
+
   <div class="brand">
     <img
       src="/assets/icons/ccc-logo.png"
@@ -191,6 +192,20 @@
   </div>
 
 </footer>
+<script>
+  const header = document.getElementById("topNav");
+
+  function toggleHeader() {
+    if (window.scrollY > 40) {
+      header.classList.add("header-visible");
+    } else {
+      header.classList.remove("header-visible");
+    }
+  }
+
+  window.addEventListener("scroll", toggleHeader);
+  toggleHeader();
+</script>
 
 </body>
 </html>
