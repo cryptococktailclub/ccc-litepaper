@@ -269,6 +269,16 @@
 
   window.addEventListener("scroll", toggleHeader);
 </script>
+<script>
+  (function () {
+    const showLegal = document.body.dataset.showLegal === "true";
+    const legalLink = document.querySelector(".footer-legal-link");
+
+    if (showLegal && legalLink) {
+      legalLink.hidden = false;
+    }
+  })();
+</script>
 
 </body>
 </html>
