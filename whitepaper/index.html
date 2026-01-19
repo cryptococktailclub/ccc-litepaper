@@ -114,7 +114,7 @@
     <li>Cocktail NFTs (ERC-721)</li>
     <li>TIPZ engagement utility (restricted ERC-20)</li>
     <li>EscrowVault for deferred funds</li>
-    <li>Off-chain CCC treasury settlement</li>
+   <li>Off-chain CCC treasury settlement (stablecoin-denominated)</li>
   </ul>
 </section>
 
@@ -136,10 +136,12 @@
 <section class="section">
   <h2 class="section-title">6. Escrow & Settlement Model</h2>
   <p>
-    ETH is routed deterministically on-chain and held in escrow only when required. All ETH-to-stablecoin
-    or fiat conversion occurs off-chain under CCC treasury operations.
+    All protocol-related economic activity is denominated in USD-backed stablecoins. Funds are routed
+    deterministically on-chain only as accounting signals and are settled off-chain via the CCC treasury.
+    The protocol does not accept or custody ETH or other volatile native cryptoassets.
   </p>
 </section>
+
 <section class="section">
   <h2 class="section-title">7. Incentive Accounting (TIPZ)</h2>
 
@@ -177,10 +179,12 @@
 <section class="section">
   <h2 class="section-title">8. Compliance Posture</h2>
   <ul>
-    <li>No on-chain swaps or oracles</li>
+    <li>No on-chain payments, swaps, or volatile asset settlement</li>
     <li>No stablecoin custody</li>
     <li>No consumer cash-out mechanisms</li>
     <li>Venues never interact with crypto directly</li>
+    <li>No custody or acceptance of ETH or other volatile cryptoassets</li>
+
   </ul>
 </section>
 
