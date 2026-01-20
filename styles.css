@@ -783,3 +783,19 @@ body[data-doc="investors"] .section {
   text-decoration: underline;
   opacity: 1;
 }
+/* =========================
+   Investor Typography — Mobile Balance
+   ========================= */
+
+@media (max-width: 640px) {
+
+  .investor-title,
+  .investor-subtitle,
+  .investor-tagline,
+  .investor-metric,
+  .investor-callout,
+  .investor-copy p {
+    text-wrap: balance;
+  }
+
+}
