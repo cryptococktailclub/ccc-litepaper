@@ -812,4 +812,10 @@ body[data-doc="investors"] .section {
   }
 
 }
+.footer-copyright {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  white-space: nowrap;
+}
 
