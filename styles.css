@@ -652,42 +652,62 @@ body[data-doc="whitepaper"] p {
   font-size: 1rem;
 }
 /* =====================================================
-   MOBILE DIAGRAM CONTAINMENT — WHITEPAPER
+   WHITEPAPER — MOBILE FLOW DIAGRAM FIX
    ===================================================== */
 
-.figure {
-  width: 100%;
-  max-width: 100%;
-  margin: 40px auto 48px;
-  display: block;
-}
-
-/* Ensure SVG or diagram content is responsive */
-.figure svg,
-.figure img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
-/* Mobile-specific spacing and flow protection */
 @media (max-width: 768px) {
 
-  .figure {
-    margin: 32px auto 40px;
-    padding: 0 8px; /* prevent edge collisions */
+  /* Kill absolute centering logic on mobile */
+  .flow-diagram,
+  .flow-spine,
+  .flow-node {
+    position: static !important;
+    transform: none !important;
   }
 
-  .section p {
-    margin-bottom: 16px;
+  /* Stack everything naturally */
+  .flow-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 48px auto;
+    gap: 40px;
   }
 
-  .section-subtitle {
-    margin-top: 28px;
+  /* Each step becomes a block */
+  .flow-step {
+    width: 100%;
+    max-width: 340px;
+    text-align: center;
+    position: relative;
+  }
+
+  /* Pink dot becomes inline marker */
+  .flow-dot {
+    margin: 0 auto 12px;
+    position: static;
+  }
+
+  /* Hide vertical spine & cross-lines */
+  .flow-line,
+  .flow-cross {
+    display: none !important;
   }
 
 }
+@media (max-width: 768px) {
+  .flow-step::after {
+    content: "↓";
+    display: block;
+    margin: 16px auto 0;
+    opacity: 0.3;
+  }
+
+  .flow-step:last-child::after {
+    display: none;
+  }
+}
+
 
 /* =====================================================
    INVESTORS OVERRIDES
