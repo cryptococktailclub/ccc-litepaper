@@ -230,6 +230,29 @@ html, body {
     transform: rotate(90deg);
   }
 }
+/* TIPZ FLOW BLOCK */
+
+.tipz-flow {
+  margin-top: 24px;
+  padding-left: 20px;
+}
+
+.tipz-flow li {
+  margin-bottom: 18px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.tipz-flow strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.section-note {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
 
 /* =====================================================
    TABLES (SHARED)
