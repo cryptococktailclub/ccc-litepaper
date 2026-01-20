@@ -143,49 +143,61 @@
 </section>
 
 <section class="section">
-  <h3 class="section-title">7. TIPZ Incentive & Settlement Architecture</h3>
 
-  <p class="section-intro">
-    TIPZ functions as the protocol’s internal incentive and accounting layer,
-    coordinating execution, attribution, and settlement when a cocktail NFT
-    is redeemed on-premise.
+  <h2 class="section-title">7. Incentive Accounting (TIPZ)</h2>
+
+  <p>
+    TIPZ is the internal incentive and accounting unit of the Crypto Cocktail Club protocol.
+    It exists to coordinate value between creators, venues, and the protocol without introducing
+    consumer-facing payment complexity.
   </p>
 
-  <div class="architecture-stack">
+  <p>
+    TIPZ is not a general-purpose payment token and is not designed for speculation.
+    It functions as an internal ledger unit that records verified execution and routes value
+    deterministically to the appropriate participants.
+  </p>
 
-    <div class="architecture-node">
-      <span class="node-label">Execution</span>
-      <p>
-        A patron redeems a cocktail NFT at a participating venue.
-        The drink is prepared and served on-site, and the NFT is
-        permanently burned after execution.
-      </p>
-    </div>
+  <h3 class="section-subtitle">Execution → Allocation → Settlement</h3>
 
-    <div class="architecture-node">
-      <span class="node-label">Attribution</span>
-      <p>
-        The protocol records execution context—bartender, venue,
-        recipe, and timestamp—creating an auditable attribution layer.
-      </p>
-    </div>
+  <p>
+    Every TIPZ lifecycle begins with real-world execution.
+    When a cocktail NFT is redeemed at a participating venue, the NFT is burned and the
+    redemption is recorded on-chain as a verified event.
+  </p>
 
-    <div class="architecture-node">
-      <span class="node-label">Incentive Allocation</span>
-      <p>
-        TIPZ is programmatically allocated across the bartender,
-        the venue, and the protocol according to predefined rules.
-      </p>
-    </div>
+  <!-- Composite Diagram -->
+  <div class="figure">
+    <!-- Paste composite diagram HTML here -->
+  </div>
 
-    <div class="architecture-node">
-      <span class="node-label">Settlement</span>
-      <p>
-        Allocated TIPZ is settled against protocol liquidity and
-        converted into stablecoin (e.g., USDC), delivering predictable
-        payouts without requiring crypto exposure from venues.
-      </p>
-    </div>
+  <p>
+    Following execution, TIPZ is allocated according to predefined protocol rules.
+    Allocations are split between the originating bartender, the executing venue,
+    and the protocol treasury.
+  </p>
+
+  <p>
+    TIPZ balances are subsequently converted into stablecoin payouts via protocol reserves,
+    ensuring predictable settlement for hospitality participants.
+  </p>
+
+  <h3 class="section-subtitle">Why TIPZ Exists</h3>
+
+  <ul class="bullet-list">
+    <li>Hospitality participants require stable, predictable payouts</li>
+    <li>Existing payment rails already serve point-of-sale needs</li>
+    <li>Protocol incentives must remain deterministic and auditable</li>
+    <li>Consumer crypto exposure introduces unnecessary risk</li>
+  </ul>
+
+  <p>
+    TIPZ allows Crypto Cocktail Club to separate execution, accounting, and settlement
+    into discrete layers—preserving simplicity for venues while maintaining transparency
+    at the protocol level.
+  </p>
+
+</section>
 <div class="composite-diagram">
 
   <svg
@@ -237,16 +249,6 @@
 
 </div>
 
-  </div>
-
-  <p class="section-note">
-    TIPZ does not function as a consumer payment asset. It operates
-    as a background coordination layer—aligning incentives while
-    preserving existing hospitality workflows.
-  </p>
-</section>
-
-<section class="section">
   <h2 class="section-title">8. Compliance Posture</h2>
   <ul>
     <li>No on-chain payments, swaps, or volatile asset settlement</li>
