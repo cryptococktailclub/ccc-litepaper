@@ -186,6 +186,56 @@
         payouts without requiring crypto exposure from venues.
       </p>
     </div>
+<div class="composite-diagram">
+
+  <svg
+    viewBox="0 0 100 140"
+    preserveAspectRatio="xMidYMid meet"
+    aria-hidden="true"
+  >
+
+    <!-- Vertical spine -->
+    <line x1="50" y1="10" x2="50" y2="130" class="flow-line" />
+
+    <!-- Nodes -->
+    <circle cx="50" cy="20" r="3" class="flow-node" />
+    <circle cx="50" cy="55" r="3" class="flow-node" />
+    <circle cx="50" cy="90" r="3" class="flow-node" />
+    <circle cx="50" cy="120" r="3" class="flow-node" />
+
+    <!-- Horizontal connectors -->
+    <line x1="50" y1="20" x2="82" y2="20" class="flow-line faint" />
+    <line x1="18" y1="55" x2="50" y2="55" class="flow-line faint" />
+    <line x1="50" y1="90" x2="82" y2="90" class="flow-line faint" />
+    <line x1="18" y1="120" x2="50" y2="120" class="flow-line faint" />
+
+  </svg>
+
+  <div class="diagram-labels">
+
+    <div class="label right" style="top: 0%">
+      <strong>NFT Execution</strong>
+      <span>Patron purchases & redeems cocktail NFT at a participating venue. NFT is burned on redemption.</span>
+    </div>
+
+    <div class="label left" style="top: 27%">
+      <strong>On-Chain Record</strong>
+      <span>Redemption is recorded as verified execution — attribution is immutable.</span>
+    </div>
+
+    <div class="label right" style="top: 55%">
+      <strong>TIPZ Allocation</strong>
+      <span>TIPZ is deterministically allocated to bartender, venue, and protocol.</span>
+    </div>
+
+    <div class="label left" style="top: 77%">
+      <strong>Stablecoin Settlement</strong>
+      <span>TIPZ converts into stablecoin payouts via protocol reserves.</span>
+    </div>
+
+  </div>
+
+</div>
 
   </div>
 
