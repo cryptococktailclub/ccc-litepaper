@@ -652,6 +652,44 @@ body[data-doc="whitepaper"] p {
   font-size: 1rem;
 }
 /* =====================================================
+   MOBILE DIAGRAM CONTAINMENT — WHITEPAPER
+   ===================================================== */
+
+.figure {
+  width: 100%;
+  max-width: 100%;
+  margin: 40px auto 48px;
+  display: block;
+}
+
+/* Ensure SVG or diagram content is responsive */
+.figure svg,
+.figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Mobile-specific spacing and flow protection */
+@media (max-width: 768px) {
+
+  .figure {
+    margin: 32px auto 40px;
+    padding: 0 8px; /* prevent edge collisions */
+  }
+
+  .section p {
+    margin-bottom: 16px;
+  }
+
+  .section-subtitle {
+    margin-top: 28px;
+  }
+
+}
+
+/* =====================================================
    INVESTORS OVERRIDES
 ===================================================== */
 
