@@ -163,19 +163,45 @@
     via the CCC treasury. Venues and bartenders never custody TIPZ and are
     never exposed to token volatility.
   </p>
-<div style="font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
-  <h3 style="color: #333;">TIPZ Allocation & Payout Flow</h3>
-  <p>Here’s a simple overview of how TIPZ tokens are allocated and converted into stablecoin payouts:</p>
-  
-  <ol>
-    <li><strong>NTF Redemption:</strong> A patron redeems a cocktail NFT at a participating bar. The NFT is burned after use.</li>
-    <li><strong>TIPZ Allocation:</strong> TIPZ tokens are automatically distributed among the bartender, the venue, and the protocol itself as a fee.</li>
-    <li><strong>Conversion to Stablecoin:</strong> Each party’s TIPZ tokens are converted into a stablecoin (e.g., USDC) from the protocol’s reserve.</li>
-    <li><strong>Payout:</strong> The bartender and venue receive their stablecoin payouts, ensuring they get a stable, predictable value in return.”</li>
+<section class="section">
+  <h3 class="section-title">TIPZ Allocation & Payout Flow</h3>
+
+  <p>
+    The TIPZ token functions as an internal accounting and incentive mechanism,
+    coordinating value distribution when a cocktail NFT is redeemed.
+  </p>
+
+  <ol class="tipz-flow">
+    <li>
+      <strong>NFT Redemption</strong><br />
+      A patron redeems a cocktail NFT at a participating venue.  
+      The NFT is executed on-premise and permanently burned.
+    </li>
+
+    <li>
+      <strong>TIPZ Allocation</strong><br />
+      Upon redemption, TIPZ is programmatically allocated across the bartender,
+      the venue, and the protocol according to predefined rules.
+    </li>
+
+    <li>
+      <strong>Stablecoin Conversion</strong><br />
+      Allocated TIPZ is settled against protocol liquidity and converted into
+      stablecoin (e.g., USDC) for each participant.
+    </li>
+
+    <li>
+      <strong>Payout</strong><br />
+      Bartenders and venues receive stablecoin payouts, ensuring predictable,
+      non-volatile compensation without requiring crypto exposure.
+    </li>
   </ol>
 
-  <p style="font-size: 0.9em; color: #666;">In summary, TIPZ tokens make the process smooth and user-friendly, with all participants receiving stablecoin payouts seamlessly.</p>
-</div>
+  <p class="section-note">
+    TIPZ operates quietly in the background—abstracting complexity while
+    enabling transparent, auditable value flow across the protocol.
+  </p>
+</section>
 
   <p>
     Guests do not purchase cocktails using TIPZ. Venues do not accept TIPZ
