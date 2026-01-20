@@ -620,15 +620,6 @@ body[data-doc="investors"] .section {
     margin: 0 auto;
   }
 
-}
-@media (max-width: 640px) {
-  .footer-disclaimer {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 11px; /* subtle mobile reduction */
-  }
-}
 
 /* ============================
    FOOTER FIXES — FINAL
@@ -710,7 +701,15 @@ body[data-doc="investors"] .section {
     max-width: 760px;
   }
 }
-
+}
+@media (max-width: 640px) {
+  .footer-disclaimer {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 11px; /* subtle mobile reduction */
+  }
+}
 /* ============================
    FOOTER — INVESTORS PILL
 ============================ */
