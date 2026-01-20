@@ -621,6 +621,14 @@ body[data-doc="investors"] .section {
   }
 
 }
+@media (max-width: 640px) {
+  .footer-disclaimer {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 11px; /* subtle mobile reduction */
+  }
+}
 
 /* ============================
    FOOTER FIXES — FINAL
