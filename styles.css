@@ -784,18 +784,25 @@ body[data-doc="investors"] .section {
   opacity: 1;
 }
 /* =========================
-   Investor Typography — Mobile Balance
+   Investor Typography — HARD MOBILE BALANCE
    ========================= */
 
 @media (max-width: 640px) {
 
   .investor-title,
   .investor-subtitle,
-  .investor-tagline,
-  .investor-metric,
-  .investor-callout,
+  .investor-section h2,
+  .investor-section h3,
   .investor-copy p {
     text-wrap: balance;
+    max-width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .investor-title {
+    letter-spacing: -0.015em;
   }
 
 }
+
