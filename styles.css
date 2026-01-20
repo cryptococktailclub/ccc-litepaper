@@ -414,6 +414,87 @@ tbody tr:hover {
     0 0 18px rgba(192,192,192,0.22),
     0 0 36px rgba(192,192,192,0.10);
 }
+/* COMPOSITE EXECUTION → INCENTIVE → SETTLEMENT DIAGRAM */
+
+.composite-diagram {
+  position: relative;
+  max-width: 720px;
+  margin: 48px auto 56px;
+}
+
+.composite-diagram svg {
+  width: 100%;
+  height: auto;
+}
+
+.flow-line {
+  stroke: rgba(255,255,255,0.22);
+  stroke-width: 0.6;
+  vector-effect: non-scaling-stroke;
+}
+
+.flow-line.faint {
+  stroke: rgba(255,255,255,0.14);
+}
+
+.flow-node {
+  fill: var(--accent);
+  opacity: 0.9;
+}
+
+/* LABELS */
+
+.diagram-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.label {
+  position: absolute;
+  max-width: 260px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.label strong {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.label.right {
+  left: 55%;
+  text-align: left;
+}
+
+.label.left {
+  right: 55%;
+  text-align: right;
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+
+  .label {
+    max-width: 220px;
+    font-size: 0.74rem;
+  }
+
+  .label.left,
+  .label.right {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+}
 
 /* =====================================================
    FOOTER (SHARED)
