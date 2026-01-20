@@ -606,6 +606,22 @@ body[data-doc="investors"] p {
 body[data-doc="investors"] .section {
   margin-top: 64px;
 }
+
+@media (max-width: 640px) {
+
+  .investor-title,
+  .investor-subtitle,
+  .investor-copy p {
+    text-wrap: balance;
+  }
+
+  .investor-copy {
+    max-width: 92%;
+    margin: 0 auto;
+  }
+
+}
+
 /* ============================
    FOOTER FIXES — FINAL
 ============================ */
