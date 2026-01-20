@@ -143,75 +143,56 @@
 </section>
 
 <section class="section">
-  <h2 class="section-title">7. Incentive Accounting (TIPZ)</h2>
+  <h3 class="section-title">TIPZ Incentive & Settlement Architecture</h3>
 
-  <p>
-    TIPZ functions as an internal incentive accounting layer within the
-    Crypto Cocktail Club protocol. It is not a consumer payment method,
-    settlement currency, or speculative asset.
+  <p class="section-intro">
+    TIPZ functions as the protocol’s internal incentive and accounting layer,
+    coordinating execution, attribution, and settlement when a cocktail NFT
+    is redeemed on-premise.
   </p>
 
-  <p>
-    TIPZ exists solely to programmatically represent participation,
-    execution, and attribution across protocol actors at the moment
-    a hospitality transaction is fulfilled.
-  </p>
+  <div class="architecture-stack">
 
-  <p>
-    At the time of cocktail redemption, TIPZ balances are deterministically
-    converted into stablecoin or fiat equivalents and settled off-chain
-    via the CCC treasury. Venues and bartenders never custody TIPZ and are
-    never exposed to token volatility.
-  </p>
-<section class="section">
-  <h3 class="section-title">TIPZ Allocation & Payout Flow</h3>
+    <div class="architecture-node">
+      <span class="node-label">Execution</span>
+      <p>
+        A patron redeems a cocktail NFT at a participating venue.
+        The drink is prepared and served on-site, and the NFT is
+        permanently burned after execution.
+      </p>
+    </div>
 
-  <p>
-    The TIPZ token functions as an internal accounting and incentive mechanism,
-    coordinating value distribution when a cocktail NFT is redeemed.
-  </p>
+    <div class="architecture-node">
+      <span class="node-label">Attribution</span>
+      <p>
+        The protocol records execution context—bartender, venue,
+        recipe, and timestamp—creating an auditable attribution layer.
+      </p>
+    </div>
 
-  <ol class="tipz-flow">
-    <li>
-      <strong>NFT Redemption</strong><br />
-      A patron redeems a cocktail NFT at a participating venue.  
-      The NFT is executed on-premise and permanently burned.
-    </li>
+    <div class="architecture-node">
+      <span class="node-label">Incentive Allocation</span>
+      <p>
+        TIPZ is programmatically allocated across the bartender,
+        the venue, and the protocol according to predefined rules.
+      </p>
+    </div>
 
-    <li>
-      <strong>TIPZ Allocation</strong><br />
-      Upon redemption, TIPZ is programmatically allocated across the bartender,
-      the venue, and the protocol according to predefined rules.
-    </li>
+    <div class="architecture-node">
+      <span class="node-label">Settlement</span>
+      <p>
+        Allocated TIPZ is settled against protocol liquidity and
+        converted into stablecoin (e.g., USDC), delivering predictable
+        payouts without requiring crypto exposure from venues.
+      </p>
+    </div>
 
-    <li>
-      <strong>Stablecoin Conversion</strong><br />
-      Allocated TIPZ is settled against protocol liquidity and converted into
-      stablecoin (e.g., USDC) for each participant.
-    </li>
-
-    <li>
-      <strong>Payout</strong><br />
-      Bartenders and venues receive stablecoin payouts, ensuring predictable,
-      non-volatile compensation without requiring crypto exposure.
-    </li>
-  </ol>
+  </div>
 
   <p class="section-note">
-    TIPZ operates quietly in the background—abstracting complexity while
-    enabling transparent, auditable value flow across the protocol.
-  </p>
-</section>
-
-  <p>
-    Guests do not purchase cocktails using TIPZ. Venues do not accept TIPZ
-    as payment. TIPZ never appears at the point of sale and does not
-    interfere with existing operational workflows.
-  </p>
-
-  <p>
-    This accounting model allows CCC to coordinate incentives transparently
-    while preserving compliance boundaries and minimizing regulatory risk.
+    TIPZ does not function as a consumer payment asset. It operates
+    as a background coordination layer—aligning incentives while
+    preserving existing hospitality workflows.
   </p>
 </section>
 
